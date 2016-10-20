@@ -241,14 +241,12 @@ D. Local Modifications
 
 4. Build-related changes
 
-  - patches/wpo.patch
+  - patches/wpo.patch (only needed when icudata dll is used).
     upstream bugs : http://bugs.icu-project.org/trac/ticket/8043
                     http://bugs.icu-project.org/trac/ticket/5701
   - patches/vscomp.patch for building with Visual Studio on Windows.
      a. do not use WINDOWS_LOCALE_API in locmap.c
      b. do not redefine stringpiece::npos
-     c. fix http://bugs.icu-project.org/trac/ticket/12129 (C4138 warning)
-     d. fix http://bugs.icu-project.org/trac/ticket/11893 (C4275 warning)
 
   - patches/data.build.patch :
       Remove unnecessary resources : unames, collator rule source
