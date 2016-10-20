@@ -1,8 +1,8 @@
 diff --git a/source/data/brkitr/brklocal.mk b/source/data/brkitr/brklocal.mk
-index 204458c..b78dc0a 100644
+index b5eca75..2a75a9e 100644
 --- a/source/data/brkitr/brklocal.mk
 +++ b/source/data/brkitr/brklocal.mk
-@@ -34,14 +34,14 @@ BRK_RES_ALIAS_SOURCE = $(BRK_RES_SYNTHETIC_ALIAS)
+@@ -34,7 +34,7 @@ BRK_RES_ALIAS_SOURCE = $(BRK_RES_SYNTHETIC_ALIAS)
  
  
  # List of dictionary files (dict).
@@ -11,9 +11,10 @@ index 204458c..b78dc0a 100644
   thaidict.txt
  
  
- # List of break iterator files (brk).
+@@ -42,7 +42,7 @@ BRK_DICT_SOURCE = burmesedict.txt cjdict.txt khmerdict.txt laodict.txt\
  BRK_SOURCE = char.txt line.txt\
   line_normal.txt line_normal_cj.txt line_normal_fi.txt\
+  line_loose_cj.txt\
 - sent.txt sent_el.txt title.txt word.txt
 + sent.txt sent_el.txt title.txt word.txt word_ja.txt
  
@@ -31,7 +32,7 @@ index 2e9a1c8..cb732a7 100644
      }
  }
 diff --git a/source/data/brkitr/root.txt b/source/data/brkitr/root.txt
-index 050fa68..f346124 100644
+index 1a1ad8a..c790282 100644
 --- a/source/data/brkitr/root.txt
 +++ b/source/data/brkitr/root.txt
 @@ -13,9 +13,6 @@ root{
@@ -45,10 +46,10 @@ index 050fa68..f346124 100644
          Laoo:process(dependency){"laodict.dict"}
          Mymr:process(dependency){"burmesedict.dict"}
 diff --git a/source/data/brkitr/rules/word.txt b/source/data/brkitr/rules/word.txt
-index aa7c47c..d72d766 100644
+index 9c93dd5..eb150ea 100644
 --- a/source/data/brkitr/rules/word.txt
 +++ b/source/data/brkitr/rules/word.txt
-@@ -65,11 +65,9 @@ $Control        = [\p{Grapheme_Cluster_Break = Control}];
+@@ -71,11 +71,9 @@ $Control        = [\p{Grapheme_Cluster_Break = Control}];
  $HangulSyllable = [\uac00-\ud7a3];
  $ComplexContext = [:LineBreak = Complex_Context:];
  $KanaKanji      = [$Han $Hiragana $Katakana];
@@ -62,7 +63,7 @@ index aa7c47c..d72d766 100644
  
  
  #
-@@ -188,11 +186,6 @@ $ExtendNumLetEx  $KatakanaEx     {400};    #  (13b)
+@@ -194,11 +192,6 @@ $ExtendNumLetEx  $KatakanaEx     {400};    #  (13b)
  #
  ^$Regional_IndicatorEx $Regional_IndicatorEx;
  
@@ -74,7 +75,7 @@ index aa7c47c..d72d766 100644
  ## -------------------------------------------------
  
  !!reverse;
-@@ -259,10 +252,6 @@ $BackKatakanaEx $BackKatakanaEx;
+@@ -265,10 +258,6 @@ $BackKatakanaEx $BackKatakanaEx;
  $BackExtendNumLetEx ($BackALetterEx | $BackHebrew_LetterEx | $BackNumericEx | $BackKatakanaEx | $BackExtendNumLetEx);
  ($BackALetterEx | $BackHebrew_LetterEx | $BackNumericEx | $BackKatakanaEx) $BackExtendNumLetEx; 
  
