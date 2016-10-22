@@ -1,7 +1,7 @@
-diff --git a/source/data/brkitr/cjdict.txt b/source/data/brkitr/cjdict.txt
+diff --git a/source/data/brkitr/dictionaries/cjdict.txt b/source/data/brkitr/dictionaries/cjdict.txt
 index debeabd..cb9abac 100644
---- a/source/data/brkitr/cjdict.txt
-+++ b/source/data/brkitr/cjdict.txt
+--- a/source/data/brkitr/dictionaries/cjdict.txt
++++ b/source/data/brkitr/dictionaries/cjdict.txt
 @@ -36724,7 +36724,9 @@
  七团	132
  七国	115
