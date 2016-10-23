@@ -230,9 +230,9 @@ D. Local Modifications
      windowsZones.txt
      zoneinfo64.txt
 
-  As of July 26, 2016, the latest version is 2016f and the above files
+  As of Oct 21, 2016, the latest version is 2016h and the above files
   are available at
-  http://source.icu-project.org/repos/icu/data/trunk/tzdata/icunew/2016f/44/
+  http://source.icu-project.org/repos/icu/data/trunk/tzdata/icunew/2016h/44/
 
 4. Build-related changes
 
@@ -258,10 +258,3 @@ D. Local Modifications
    http://crbug.com/417850
 
    - patches/utf32.patch
-
-6. Cherry pick locale data fixes from Android
-  - patches/locale_extra.patch
-  - upstream bug
-        http://unicode.org/cldr/trac/ticket/7969 (percent sign in ar and fa)
-  - Android patch for the 2nd bug
-        https://android.googlesource.com/platform/external/icu/+/56b2b8b
