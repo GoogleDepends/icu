@@ -257,3 +257,9 @@ D. Local Modifications
    http://crbug.com/417850
 
    - patches/utf32.patch
+
+6. Fix a bug in scriptset calculation (will be fixed 58.1 maint. release.)
+
+   http://www.icu-project.org/trac/ticket/12825
+
+   - patches/scriptset.patch
