@@ -258,8 +258,11 @@ D. Local Modifications
 
    - patches/utf32.patch
 
-6. Fix a bug in scriptset calculation (will be fixed 58.1 maint. release.)
+6. Fix two bugs found in 58.1 that will fixed in 58.1 maintenance release
 
-   http://www.icu-project.org/trac/ticket/12825
+   upstream bugs:
+     http://www.icu-project.org/trac/ticket/12825 (scriptset)
+     http://www.icu-project.org/trac/ticket/12822 (without std::string on Win)
 
    - patches/scriptset.patch
+   - patches/digilist.patch
