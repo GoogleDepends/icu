@@ -313,3 +313,7 @@ D. Local Modifications
   - source/data/in/{pnames,uprops}.icu were copied from the upstream,
     but they're just for the record. Their contents are hard-coded
     in the source files patched by the above patch.
+
+14. Fix a timezone directory traversal bug
+  - patches/tzpath.patch
+  - upstream bug: http://bugs.icu-project.org/trac/ticket/12798 (fixed in 58)
