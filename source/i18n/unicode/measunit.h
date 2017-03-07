@@ -1,4 +1,4 @@
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 **********************************************************************
@@ -409,45 +409,13 @@ class U_I18N_API MeasureUnit: public UObject {
     static MeasureUnit *createMilePerGallonImperial(UErrorCode &status);
 #endif  /* U_HIDE_DRAFT_API */
 
-#ifndef U_HIDE_DRAFT_API
     /**
-     * Returns unit of coordinate: east.
-     * Caller owns returned value and must free it.
-     * @param status ICU error code.
-     * @draft ICU 58
+     * @draft ICU 58, withdrawn
+     * static MeasureUnit *createEast(UErrorCode &status);
+     * static MeasureUnit *createNorth(UErrorCode &status);
+     * static MeasureUnit *createSouth(UErrorCode &status);
+     * static MeasureUnit *createWest(UErrorCode &status);
      */
-    static MeasureUnit *createEast(UErrorCode &status);
-#endif  /* U_HIDE_DRAFT_API */
-
-#ifndef U_HIDE_DRAFT_API
-    /**
-     * Returns unit of coordinate: north.
-     * Caller owns returned value and must free it.
-     * @param status ICU error code.
-     * @draft ICU 58
-     */
-    static MeasureUnit *createNorth(UErrorCode &status);
-#endif  /* U_HIDE_DRAFT_API */
-
-#ifndef U_HIDE_DRAFT_API
-    /**
-     * Returns unit of coordinate: south.
-     * Caller owns returned value and must free it.
-     * @param status ICU error code.
-     * @draft ICU 58
-     */
-    static MeasureUnit *createSouth(UErrorCode &status);
-#endif  /* U_HIDE_DRAFT_API */
-
-#ifndef U_HIDE_DRAFT_API
-    /**
-     * Returns unit of coordinate: west.
-     * Caller owns returned value and must free it.
-     * @param status ICU error code.
-     * @draft ICU 58
-     */
-    static MeasureUnit *createWest(UErrorCode &status);
-#endif  /* U_HIDE_DRAFT_API */
 
     /**
      * Returns unit of digital: bit.
@@ -872,6 +840,16 @@ class U_I18N_API MeasureUnit: public UObject {
      * @stable ICU 53
      */
     static MeasureUnit *createPicometer(UErrorCode &status);
+
+#ifndef U_HIDE_DRAFT_API
+    /**
+     * Returns unit of length: point.
+     * Caller owns returned value and must free it.
+     * @param status ICU error code.
+     * @draft ICU 59
+     */
+    static MeasureUnit *createPoint(UErrorCode &status);
+#endif  /* U_HIDE_DRAFT_API */
 
     /**
      * Returns unit of length: yard.

@@ -6,26 +6,28 @@
 # This is used to prepare for a major version update of ICU (e.g. from
 # 54.1 to 56.1). Running this script is step 1 in README.chromium.
 
-if [ $# -lt 1 ];
-then
-  echo "Usage: "$0" version (e.g. '56-1')" >&2
-  exit 1
-fi
+#if [ $# -lt 1 ];
+#then
+#  echo "Usage: "$0" version (e.g. '56-1')" >&2
+#  exit 1
+#fi
 
 version="$1"
 repoprefix="http://source.icu-project.org/repos/icu/icu/tags/release-"
-repo="${repoprefix}${version}"
+repo="${repoprefix}${version}/icu4c"
 treeroot="$(dirname "$0")/.."
 
 # Check if the repo for $version is available.
-svn ls "${repo}" > /dev/null 2>&1  || \
-    { echo "${repo} does not exist." >&2; exit 2; }
+#svn ls "${repo}" > /dev/null 2>&1  || \
+#    { echo "${repo} does not exist." >&2; exit 2; }
 
 echo "Cleaning up source/ ..."
 for file in source LICENSE license.html readme.html APIChangeReport.html
 do
   rm -rf "${treeroot}/${file}"
 done
+
+repo="http://source.icu-project.org/repos/icu/branches/markus/ucharptr2/icu4c"
 
 echo "Download ${version} from the upstream repository ..."
 for file in source LICENSE license.html readme.html APIChangeReport.html

@@ -1,4 +1,4 @@
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 **********************************************************************
@@ -178,12 +178,12 @@
 
 /**
  * \def NULL
- * Define NULL if necessary, to 0 for C++ and to ((void *)0) for C.
+ * Define NULL if necessary, to nullptr for C++ and to ((void *)0) for C.
  * @stable ICU 2.0
  */
 #ifndef NULL
 #ifdef __cplusplus
-#define NULL    0
+#define NULL    nullptr
 #else
 #define NULL    ((void *)0)
 #endif
@@ -307,11 +307,7 @@ typedef double UDate;
 #define U_IO_API
 #define U_TOOLUTIL_API
 #elif defined(U_COMMON_IMPLEMENTATION)
-#if defined(U_ICUDATAENTRY_IN_COMMON)
-#define U_DATA_API     U_EXPORT
-#else
 #define U_DATA_API     U_IMPORT
-#endif
 #define U_COMMON_API   U_EXPORT
 #define U_I18N_API     U_IMPORT
 #define U_LAYOUT_API   U_IMPORT

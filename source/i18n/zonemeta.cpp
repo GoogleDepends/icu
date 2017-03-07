@@ -1,4 +1,4 @@
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 *******************************************************************************
@@ -17,7 +17,7 @@
 #include "unicode/ustring.h"
 #include "unicode/putil.h"
 #include "unicode/simpletz.h"
-
+#include "unicode/strenum.h"
 #include "umutex.h"
 #include "uvector.h"
 #include "cmemory.h"

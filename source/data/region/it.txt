@@ -89,7 +89,7 @@ it{
         CW{"Curaçao"}
         CX{"Isola Christmas"}
         CY{"Cipro"}
-        CZ{"Repubblica Ceca"}
+        CZ{"Cèchia"}
         DE{"Germania"}
         DG{"Diego Garcia"}
         DJ{"Gibuti"}
@@ -131,7 +131,7 @@ it{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong"}
+        HK{"RAS di Hong Kong"}
         HM{"Isole Heard e McDonald"}
         HN{"Honduras"}
         HR{"Croazia"}
@@ -185,7 +185,7 @@ it{
         ML{"Mali"}
         MM{"Myanmar (Birmania)"}
         MN{"Mongolia"}
-        MO{"Macao"}
+        MO{"RAS di Macao"}
         MP{"Isole Marianne settentrionali"}
         MQ{"Martinica"}
         MR{"Mauritania"}
@@ -220,7 +220,7 @@ it{
         PM{"Saint Pierre e Miquelon"}
         PN{"Isole Pitcairn"}
         PR{"Portorico"}
-        PS{"Palestina"}
+        PS{"Territori palestinesi"}
         PT{"Portogallo"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -260,7 +260,7 @@ it{
         TH{"Thailandia"}
         TJ{"Tagikistan"}
         TK{"Tokelau"}
-        TL{"Timor Leste"}
+        TL{"Timor Est"}
         TM{"Turkmenistan"}
         TN{"Tunisia"}
         TO{"Tonga"}
@@ -295,6 +295,9 @@ it{
     }
     Countries%short{
         GB{"UK"}
+        HK{"Hong Kong"}
+        MO{"Macao"}
+        PS{"Palestina"}
         UN{"nazioni unite"}
         US{"USA"}
     }
@@ -302,10 +305,10 @@ it{
         CD{"Congo (RDC)"}
         CG{"Congo (Repubblica)"}
         CI{"Côte d’Ivoire"}
-        CZ{"Cèchia"}
+        CZ{"Repubblica Ceca"}
         FK{"Isole Falkland (Isole Malvine)"}
         MK{"Ex Repubblica Jugoslava di Macedonia"}
-        TL{"Timor Est"}
+        TL{"Timor Leste"}
     }
-    Version{"2.1.28.79"}
+    Version{"2.1.31.86"}
 }

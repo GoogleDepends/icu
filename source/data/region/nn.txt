@@ -130,7 +130,7 @@ nn{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong"}
+        HK{"Hongkong S.A.R. Kina"}
         HM{"Heard- og McDonaldsøyane"}
         HN{"Honduras"}
         HR{"Kroatia"}
@@ -184,7 +184,7 @@ nn{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao"}
+        MO{"Macao S.A.R. Kina"}
         MP{"Nord-Marianane"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -293,6 +293,8 @@ nn{
     }
     Countries%short{
         GB{"Storbritannia"}
+        HK{"Hongkong"}
+        MO{"Macao"}
         US{"USA"}
     }
     Countries%variant{
@@ -301,5 +303,5 @@ nn{
         FK{"Falklandsøyane (Islas Malvinas)"}
         MK{"Den tidlegare jugoslaviske republikken Makedonia"}
     }
-    Version{"2.1.28.76"}
+    Version{"2.1.31.86"}
 }

@@ -131,7 +131,7 @@ sl{
         GU{"Guam"}
         GW{"Gvineja Bissau"}
         GY{"Gvajana"}
-        HK{"Hongkong"}
+        HK{"Posebno administrativno območje LR Kitajske Hongkong"}
         HM{"Heardov otok in McDonaldovi otoki"}
         HN{"Honduras"}
         HR{"Hrvaška"}
@@ -185,7 +185,7 @@ sl{
         ML{"Mali"}
         MM{"Mjanmar (Burma)"}
         MN{"Mongolija"}
-        MO{"Macao"}
+        MO{"Posebno administrativno območje LR Kitajske Macao"}
         MP{"Severni Marianski otoki"}
         MQ{"Martinik"}
         MR{"Mavretanija"}
@@ -220,7 +220,7 @@ sl{
         PM{"Saint Pierre in Miquelon"}
         PN{"Pitcairn"}
         PR{"Portoriko"}
-        PS{"Palestina"}
+        PS{"Palestinsko ozemlje"}
         PT{"Portugalska"}
         PW{"Palau"}
         PY{"Paragvaj"}
@@ -295,6 +295,9 @@ sl{
     }
     Countries%short{
         GB{"ZK"}
+        HK{"Hongkong"}
+        MO{"Macao"}
+        PS{"Palestina"}
         UN{"Združeni narodi"}
         US{"ZDA"}
     }
@@ -306,5 +309,5 @@ sl{
         MK{"Makedonija (FYROM)"}
         TL{"Vzhodni Timor"}
     }
-    Version{"2.1.28.79"}
+    Version{"2.1.31.86"}
 }

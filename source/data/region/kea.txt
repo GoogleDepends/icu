@@ -89,7 +89,7 @@ kea{
         CW{"Kurasau"}
         CX{"Ilha di Natal"}
         CY{"Xipri"}
-        CZ{"Repúblika Txeka"}
+        CZ{"Txékia"}
         DE{"Alimanha"}
         DG{"Diegu Garsia"}
         DJ{"Djibuti"}
@@ -131,7 +131,7 @@ kea{
         GU{"Guam"}
         GW{"Gine-Bisau"}
         GY{"Giana"}
-        HK{"Hong Kong"}
+        HK{"Rejiãu Administrativu Spesial di Hong Kong"}
         HM{"Ilhas Heard i McDonald"}
         HN{"Onduras"}
         HR{"Kroásia"}
@@ -185,7 +185,7 @@ kea{
         ML{"Mali"}
         MM{"Mianmar (Birmánia)"}
         MN{"Mongólia"}
-        MO{"Makau"}
+        MO{"Rejiãu Administrativu Spesial di Makau"}
         MP{"Ilhas Marianas di Norti"}
         MQ{"Martinika"}
         MR{"Mauritánia"}
@@ -294,15 +294,17 @@ kea{
     }
     Countries%short{
         GB{"R.U."}
+        HK{"Hong Kong"}
+        MO{"Makau"}
         US{"S.U."}
     }
     Countries%variant{
         CD{"Repúblika Dimokrátika di Kongu"}
         CG{"Repúblika di Kongu"}
         CI{"Kosta di Marfin (Côte d’Ivoire)"}
-        CZ{"Txékia"}
+        CZ{"Repúblika Txeka"}
         FK{"Ilhas Falkland (Ilhas Malvinas)"}
         MK{"Masidónia (FYROM)"}
     }
-    Version{"2.1.27.46"}
+    Version{"2.1.31.74"}
 }
