@@ -80,9 +80,12 @@ public:
      * @draft ICU 59
      */
     inline operator char16_t *() const { return get(); }
+#if 0
+    // this does not help !
     inline operator uint16_t *() const {
       return reinterpret_cast<uint16_t*>(get());
     }
+#endif
 
 private:
     Char16Ptr() = delete;
