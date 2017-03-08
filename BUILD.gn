@@ -51,6 +51,12 @@ config("icu_config") {
       defines += [ "ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_STATIC" ]
     }
   }
+
+  if (is_win) {
+    defines += [ "UCHAR_TYPE=wchar_t" ]
+  } else {
+    defines += [ "UCHAR_TYPE=uint16_t" ]
+  }
 }
 
 # Config used only by ICU code.
@@ -953,7 +959,7 @@ component("icuuc") {
   public_configs = [ ":icu_config" ]
 
   if (is_win || icu_use_data_file) {
-    sources += [ "source/stubdata/stubdata.c" ]
+    sources += [ "source/stubdata/stubdata.cpp" ]
     defines += [ "U_ICUDATAENTRY_IN_COMMON" ]
   }
 }
