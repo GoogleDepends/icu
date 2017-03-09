@@ -37,6 +37,15 @@
           'U_STATIC_IMPLEMENTATION',
         ],
       }],
+      ['OS=="win"', {
+        'defines': [
+          'UCHAR_TYPE=wchar_t',
+        ],
+      },{
+        'defines': [
+          'UCHAR_TYPE=uint16_t',
+        ],
+      }],
       ['(OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris" \
          or OS=="netbsd" or OS=="mac" or OS=="android" or OS=="qnx") and \
         (target_arch=="arm" or target_arch=="ia32" or \
@@ -597,10 +606,13 @@
               'unicode/bytestriebuilder.h',
               'unicode/bytestrie.h',
               'unicode/caniter.h',
+              'unicode/casemap.h',
+              'unicode/char16ptr.h',
               'unicode/chariter.h',
               'unicode/dbbi.h',
               'unicode/docmain.h',
               'unicode/dtintrv.h',
+              'unicode/edits.h',
               'unicode/enumset.h',
               'unicode/errorcode.h',
               'unicode/filteredbrk.h',
