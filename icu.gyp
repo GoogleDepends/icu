@@ -437,7 +437,7 @@
             }],
             [ 'OS == "win" or icu_use_data_file_flag==1', {
               'sources': [
-                'source/stubdata/stubdata.c',
+                'source/stubdata/stubdata.cpp',
               ],
               'defines': [
                 'U_ICUDATAENTRY_IN_COMMON',
