@@ -27,6 +27,15 @@ diff --git a/source/common/udata.cpp b/source/common/udata.cpp
 index 29074a64..21dfd0f2 100644
 --- a/source/common/udata.cpp
 +++ b/source/common/udata.cpp
+@@ -629,7 +629,7 @@ U_NAMESPACE_END
+  *                                                                      *
+  *----------------------------------------------------------------------*/
+ #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
+-extern "C" const DataHeader U_DATA_API U_ICUDATA_ENTRY_POINT;
++extern "C" const ICU_Data_Header U_DATA_API U_ICUDATA_ENTRY_POINT;
+ #endif
+ 
+ /*
 @@ -681,7 +681,7 @@ openCommonData(const char *path,          /*  Path from OpenChoice?          */
  #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
              int32_t i;

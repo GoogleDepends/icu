@@ -629,7 +629,7 @@ U_NAMESPACE_END
  *                                                                      *
  *----------------------------------------------------------------------*/
 #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
-extern "C" const DataHeader U_DATA_API U_ICUDATA_ENTRY_POINT;
+extern "C" const ICU_Data_Header U_DATA_API U_ICUDATA_ENTRY_POINT;
 #endif
 
 /*
