@@ -41,6 +41,7 @@
         'defines': [
           'UCHAR_TYPE=wchar_t',
         ],
+	'cflags': [ '/utf-8' ],
       },{
         'defines': [
           'UCHAR_TYPE=uint16_t',
