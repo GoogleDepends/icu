@@ -89,7 +89,7 @@ gd{
         CW{"Curaçao"}
         CX{"Eilean na Nollaig"}
         CY{"Cìopras"}
-        CZ{"Poblachd na Seice"}
+        CZ{"An t-Seic"}
         DE{"A’ Ghearmailt"}
         DG{"Diego Garcia"}
         DJ{"Diobùtaidh"}
@@ -131,7 +131,7 @@ gd{
         GU{"Guam"}
         GW{"Gini-Bioso"}
         GY{"Guidheàna"}
-        HK{"Hong Kong"}
+        HK{"Hong Kong SAR na Sìne"}
         HM{"Eilean Heard is MhicDhòmhnaill"}
         HN{"Hondùras"}
         HR{"A’ Chròthais"}
@@ -185,7 +185,7 @@ gd{
         ML{"Màili"}
         MM{"Miànmar"}
         MN{"Dùthaich nam Mongol"}
-        MO{"Macàthu"}
+        MO{"Macàthu SAR na Sìne"}
         MP{"Na h-Eileanan Mairianach a Tuath"}
         MQ{"Mairtinic"}
         MR{"Moratàinea"}
@@ -220,7 +220,7 @@ gd{
         PM{"Saint Pierre agus Miquelon"}
         PN{"Eileanan Peit a’ Chàirn"}
         PR{"Porto Rìceo"}
-        PS{"Palastain"}
+        PS{"Na Ranntairean Palastaineach"}
         PT{"A’ Phortagail"}
         PW{"Palabh"}
         PY{"Paraguaidh"}
@@ -294,16 +294,19 @@ gd{
     }
     Countries%short{
         GB{"RA"}
+        HK{"Hong Kong"}
+        MO{"Macàthu"}
+        PS{"Palastain"}
         US{"SA"}
     }
     Countries%variant{
         CD{"A’ Chongo (PDC)"}
         CG{"A’ Chongo"}
         CI{"An Costa Ìbhri"}
-        CZ{"An t-Seic"}
+        CZ{"Poblachd na Seice"}
         FK{"Na h-Eileanan Fàclannach (Islas Malvinas)"}
         MK{"A’ Mhasadon (FYROM)"}
         TL{"Tìomor an Ear"}
     }
-    Version{"2.1.28.76"}
+    Version{"2.1.31.86"}
 }

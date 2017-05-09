@@ -89,7 +89,7 @@ eu{
         CW{"Curaçao"}
         CX{"Christmas uhartea"}
         CY{"Zipre"}
-        CZ{"Txekiar Errepublika"}
+        CZ{"Txekia"}
         DE{"Alemania"}
         DG{"Diego Garcia"}
         DJ{"Djibuti"}
@@ -131,7 +131,7 @@ eu{
         GU{"Guam"}
         GW{"Ginea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong"}
+        HK{"Hong Kong AEB Txina"}
         HM{"Heard eta McDonald uharteak"}
         HN{"Honduras"}
         HR{"Kroazia"}
@@ -185,7 +185,7 @@ eu{
         ML{"Mali"}
         MM{"Myanmar (Birmania)"}
         MN{"Mongolia"}
-        MO{"Macau"}
+        MO{"Macau AEB Txina"}
         MP{"Iparraldeko Mariana uharteak"}
         MQ{"Martinika"}
         MR{"Mauritania"}
@@ -220,7 +220,7 @@ eu{
         PM{"Saint-Pierre eta Mikelune"}
         PN{"Pitcairn uharteak"}
         PR{"Puerto Rico"}
-        PS{"Palestina"}
+        PS{"Palestinako Lurraldeak"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguai"}
@@ -294,15 +294,18 @@ eu{
     }
     Countries%short{
         GB{"EB"}
+        HK{"Hong Kong"}
+        MO{"Macau"}
+        PS{"Palestina"}
         US{"AEB"}
     }
     Countries%variant{
         CD{"Kongo (KED)"}
         CG{"Kongo (errepublika)"}
-        CZ{"Txekia"}
+        CZ{"Txekiar Errepublika"}
         FK{"Falkland uharteak (Malvina uharteak)"}
         MK{"Mazedonia (Mazedoniako Yugoslaviar Errepublika ohia)"}
         TL{"Timor ekialdea"}
     }
-    Version{"2.1.29.20"}
+    Version{"2.1.32.59"}
 }

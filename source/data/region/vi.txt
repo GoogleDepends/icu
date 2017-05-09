@@ -89,7 +89,7 @@ vi{
         CW{"Curaçao"}
         CX{"Đảo Giáng Sinh"}
         CY{"Síp"}
-        CZ{"Cộng hòa Séc"}
+        CZ{"Czechia"}
         DE{"Đức"}
         DG{"Diego Garcia"}
         DJ{"Djibouti"}
@@ -131,7 +131,7 @@ vi{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hồng Kông"}
+        HK{"Hồng Kông, Trung Quốc"}
         HM{"Quần đảo Heard và McDonald"}
         HN{"Honduras"}
         HR{"Croatia"}
@@ -185,7 +185,7 @@ vi{
         ML{"Mali"}
         MM{"Myanmar (Miến Điện)"}
         MN{"Mông Cổ"}
-        MO{"Macao"}
+        MO{"Macao, Trung Quốc"}
         MP{"Quần đảo Bắc Mariana"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -220,7 +220,7 @@ vi{
         PM{"Saint Pierre và Miquelon"}
         PN{"Quần đảo Pitcairn"}
         PR{"Puerto Rico"}
-        PS{"Palestine"}
+        PS{"Lãnh thổ Palestine"}
         PT{"Bồ Đào Nha"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -295,6 +295,9 @@ vi{
     }
     Countries%short{
         GB{"Vương quốc Anh"}
+        HK{"Hồng Kông"}
+        MO{"Macao"}
+        PS{"Palestine"}
         UN{"Liên hiệp quốc"}
         US{"Hoa Kỳ"}
     }
@@ -302,10 +305,10 @@ vi{
         CD{"Cộng hòa Dân chủ Congo"}
         CG{"Cộng hòa Congo"}
         CI{"Bờ Biển Ngà"}
-        CZ{"Czechia"}
+        CZ{"Cộng hòa Séc"}
         FK{"Quần đảo Falkland (Islas Malvinas)"}
         MK{"Macedonia (FYROM)"}
         TL{"Đông Timor"}
     }
-    Version{"2.1.28.79"}
+    Version{"2.1.32.59"}
 }
