@@ -108,7 +108,7 @@ lt{
         EU{"Europos Sąjunga"}
         FI{"Suomija"}
         FJ{"Fidžis"}
-        FK{"Folklando Salos"}
+        FK{"Folklando (Malvinų) Salos"}
         FM{"Mikronezija"}
         FO{"Farerų Salos"}
         FR{"Prancūzija"}
@@ -131,7 +131,7 @@ lt{
         GU{"Guamas"}
         GW{"Bisau Gvinėja"}
         GY{"Gajana"}
-        HK{"Ypatingasis Administracinis Kinijos Regionas Honkongas"}
+        HK{"Honkongas"}
         HM{"Herdo ir Makdonaldo Salos"}
         HN{"Hondūras"}
         HR{"Kroatija"}
@@ -181,11 +181,11 @@ lt{
         MF{"Sen Martenas"}
         MG{"Madagaskaras"}
         MH{"Maršalo Salos"}
-        MK{"Makedonija"}
+        MK{"Makedonijos Respublika"}
         ML{"Malis"}
         MM{"Mianmaras (Birma)"}
         MN{"Mongolija"}
-        MO{"Ypatingasis Administracinis Kinijos Regionas Makao"}
+        MO{"Makao"}
         MP{"Marianos Šiaurinės Salos"}
         MQ{"Martinika"}
         MR{"Mauritanija"}
@@ -220,7 +220,7 @@ lt{
         PM{"Sen Pjeras ir Mikelonas"}
         PN{"Pitkerno salos"}
         PR{"Puerto Rikas"}
-        PS{"Palestinos teritorija"}
+        PS{"Palestina"}
         PT{"Portugalija"}
         PW{"Palau"}
         PY{"Paragvajus"}
@@ -295,9 +295,6 @@ lt{
     }
     Countries%short{
         GB{"JK"}
-        HK{"Honkongas"}
-        MO{"Makao"}
-        PS{"Palestina"}
         UN{"JT"}
         US{"JAV"}
     }
@@ -305,8 +302,6 @@ lt{
         CD{"Kongo Demokratinė Respublika"}
         CG{"Kongo Respublika"}
         CI{"Dramblio Kaulo Kranto Respublika"}
-        FK{"Folklando (Malvinų) Salos"}
-        MK{"Makedonijos Respublika"}
     }
     Version{"2.1.32.59"}
 }

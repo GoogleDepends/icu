@@ -108,7 +108,7 @@ nb{
         EU{"EU"}
         FI{"Finland"}
         FJ{"Fiji"}
-        FK{"Falklandsøyene"}
+        FK{"Falklandsøyene (Islas Malvinas)"}
         FM{"Mikronesiaføderasjonen"}
         FO{"Færøyene"}
         FR{"Frankrike"}
@@ -131,7 +131,7 @@ nb{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong S.A.R. Kina"}
+        HK{"Hongkong"}
         HM{"Heard- og McDonaldøyene"}
         HN{"Honduras"}
         HR{"Kroatia"}
@@ -181,11 +181,11 @@ nb{
         MF{"Saint-Martin"}
         MG{"Madagaskar"}
         MH{"Marshalløyene"}
-        MK{"Makedonia"}
+        MK{"Den tidligere jugoslaviske republikk Makedonia"}
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao S.A.R. Kina"}
+        MO{"Macao"}
         MP{"Nord-Marianene"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -220,7 +220,7 @@ nb{
         PM{"St. Pierre og Miquelon"}
         PN{"Pitcairn"}
         PR{"Puerto Rico"}
-        PS{"Det palestinske området"}
+        PS{"Palestina"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -295,9 +295,6 @@ nb{
     }
     Countries%short{
         GB{"Storbritannia"}
-        HK{"Hongkong"}
-        MO{"Macao"}
-        PS{"Palestina"}
         UN{"FN"}
         US{"USA"}
     }
@@ -305,8 +302,6 @@ nb{
         CD{"Den demokratiske republikken Kongo"}
         CG{"Republikken Kongo"}
         CZ{"Den tsjekkiske republikk"}
-        FK{"Falklandsøyene (Islas Malvinas)"}
-        MK{"Den tidligere jugoslaviske republikk Makedonia"}
     }
     Version{"2.1.32.59"}
 }
