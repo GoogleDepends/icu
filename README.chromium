@@ -271,3 +271,10 @@ D. Local Modifications
    http://crbug.com/417850
 
    - patches/utf32.patch
+
+6. Don't use '__cdecl' for function arguments (as opposed to functions)
+   in uclean.h to make MSVC happy (C4229 warning).
+
+   http://www.icu-project.org/trac/ticket/13030
+
+   - patches/msvc4229.patch
