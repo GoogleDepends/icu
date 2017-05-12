@@ -278,3 +278,12 @@ D. Local Modifications
    http://www.icu-project.org/trac/ticket/13030
 
    - patches/msvc4229.patch
+
+7. C++ 11 does not allow a string literal to be assigned to a variable
+   of char*.
+
+   http://www.icu-project.org/trac/ticket/13192
+
+   - patches/string_literal_charptr.patch
+
+   
