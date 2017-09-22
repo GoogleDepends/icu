@@ -637,6 +637,8 @@ component("icuuc") {
     "source/common/putil.cpp",
     "source/common/putilimp.h",
     "source/common/rbbi.cpp",
+    "source/common/rbbi_cache.cpp",
+    "source/common/rbbi_cache.h",
     "source/common/rbbidata.cpp",
     "source/common/rbbidata.h",
     "source/common/rbbinode.cpp",
