@@ -206,6 +206,8 @@ setCommonICUData(UDataMemory *pData,     /*  The new common data.  Belongs to ca
     return didUpdate;
 }
 
+#if U_PLATFORM_HAS_WINUWP_API == 0 
+
 static UBool
 setCommonICUDataPointer(const void *pData, UBool /*warn*/, UErrorCode *pErrorCode) {
     UDataMemory tData;
@@ -214,6 +216,8 @@ setCommonICUDataPointer(const void *pData, UBool /*warn*/, UErrorCode *pErrorCod
     udata_checkCommonData(&tData, pErrorCode);
     return setCommonICUData(&tData, FALSE, pErrorCode);
 }
+
+#endif
 
 static const char *
 findBasename(const char *path) {
@@ -629,7 +633,7 @@ U_NAMESPACE_END
  *                                                                      *
  *----------------------------------------------------------------------*/
 #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
-extern "C" const ICU_Data_Header U_DATA_API U_ICUDATA_ENTRY_POINT;
+extern "C" const DataHeader U_DATA_API U_ICUDATA_ENTRY_POINT;
 #endif
 
 /*
@@ -681,7 +685,7 @@ openCommonData(const char *path,          /*  Path from OpenChoice?          */
 #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
             int32_t i;
             for(i = 0; i < commonDataIndex; ++i) {
-                if(gCommonICUDataArray[i]->pHeader == &U_ICUDATA_ENTRY_POINT.hdr) {
+                if(gCommonICUDataArray[i]->pHeader == &U_ICUDATA_ENTRY_POINT) {
                     /* The linked-in data is already in the list. */
                     return NULL;
                 }
@@ -703,7 +707,7 @@ openCommonData(const char *path,          /*  Path from OpenChoice?          */
         }
         */
 #if U_PLATFORM_HAS_WINUWP_API == 0 // Windows UWP Platform does not support dll icu data at this time
-        setCommonICUDataPointer(&U_ICUDATA_ENTRY_POINT.hdr, FALSE, pErrorCode);
+        setCommonICUDataPointer(&U_ICUDATA_ENTRY_POINT, FALSE, pErrorCode);
         {
             Mutex lock;
             return gCommonICUDataArray[commonDataIndex];
@@ -982,7 +986,7 @@ static UDataMemory *doLoadFromIndividualFiles(const char *pkgName,
     /* init path iterator for individual files */
     UDataPathIterator iter(dataPath, pkgName, path, tocEntryPathSuffix, FALSE, pErrorCode);
 
-    while((pathBuffer = iter.next(pErrorCode)))
+    while((pathBuffer = iter.next(pErrorCode)) != NULL)
     {
 #ifdef UDATA_DEBUG
         fprintf(stderr, "UDATA: trying individual file %s\n", pathBuffer);
@@ -1165,7 +1169,7 @@ doOpenChoice(const char *path, const char *type, const char *name,
         if(uprv_strchr(path,U_FILE_ALT_SEP_CHAR) != NULL) {
             altSepPath.append(path, *pErrorCode);
             char *p;
-            while((p=uprv_strchr(altSepPath.data(), U_FILE_ALT_SEP_CHAR))) {
+            while ((p = uprv_strchr(altSepPath.data(), U_FILE_ALT_SEP_CHAR)) != NULL) {
                 *p = U_FILE_SEP_CHAR;
             }
 #if defined (UDATA_DEBUG)
