@@ -187,6 +187,13 @@ them when updating ICU.
     https://ssl.icu-project.org/trac/ticket/9451
   - rules/word_ja.txt (used only on Android)
     Added for Japanese-specific word-breaking without the C+J dictionary.
+  - rules/{fi,root,zh,zh_Hant}.txt
+    a. Drop *_loose.txt for fi/root and use the corresponding line_normal.txt
+    b. Use line_normal by default.
+    c. Drop local patches we used to have for the following issues. They'll
+       be dealt with in the upstream (Unicode/CLDR).
+       http://unicode.org/cldr/trac/ticket/6557
+       http://unicode.org/cldr/trac/ticket/4200 (http://crbug.com/39779)
 
 4. source/data/trnslit/root_subset.txt
    Subset of transliteration data to keep for:
@@ -213,13 +220,6 @@ D. Local Modifications
 
 
 2. Breakiterator patches
-  - patches/linebrk.patch
-    a. Drop *_loose.txt for all locales and use the corresponding normal.txt
-    b. Drop local patches we used to have for the following issues. They'll
-       be dealt with in the upstream (Unicode/CLDR).
-       http://unicode.org/cldr/trac/ticket/6557
-       http://unicode.org/cldr/trac/ticket/4200 (http://crbug.com/39779)
-
   - patches/wordbrk.patch for word.txt
     a. Move full stops (U+002E, U+FF0E) from MidNumLet to MidNum so that
        FQDN labels can be split at '.'
