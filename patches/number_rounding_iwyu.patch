@@ -1,0 +1,12 @@
+diff --git a/source/i18n/number_rounding.cpp b/source/i18n/number_rounding.cpp
+index ad5d2d8d..9a624d5c 100644
+--- a/source/i18n/number_rounding.cpp
++++ b/source/i18n/number_rounding.cpp
+@@ -6,6 +6,7 @@
+ #if !UCONFIG_NO_FORMATTING && !UPRV_INCOMPLETE_CPP11_SUPPORT
+ 
+ #include "uassert.h"
++#include "unicode/currunit.h"
+ #include "unicode/numberformatter.h"
+ #include "number_types.h"
+ #include "number_decimalquantity.h"

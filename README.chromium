@@ -318,3 +318,7 @@ D. Local Modifications
     https://ssl.icu-project.org/trac/ticket/12770
 
   - patches/timezone_detection.patch
+
+13. Speculative Windows build failure fix
+
+  - patches/number_rounding_iwyu.patch
