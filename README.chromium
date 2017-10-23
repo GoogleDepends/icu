@@ -166,7 +166,8 @@ them when updating ICU.
     They're generated with scripts/{eucjp,sjis,big5,euckr,single_byte}_gen.sh.
 
   - gb18030.ucm and windows-936.ucm
-    gb_table.patch was applied for the following changes.
+    gb_table.patch was applied for the following changes. No need
+    to apply it again. The patch is kept for the record.
     a. Map \xA3\xA0 to U+3000 instead of U+E5E5 in gb18030 and windows-936 per
     the encoding spec (one-way mapping in toUnicode direction).
     b. Map \xA8\xBF to U+01F9 instead of U+E7C8. Add one-way map
