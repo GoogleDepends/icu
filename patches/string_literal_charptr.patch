@@ -1,8 +1,8 @@
 diff --git a/source/common/putil.cpp b/source/common/putil.cpp
-index 023186c8..9af0bb3c 100644
+index f15f7c41..ca93f64e 100644
 --- a/source/common/putil.cpp
 +++ b/source/common/putil.cpp
-@@ -1228,7 +1228,7 @@ UInitOnce gTimeZoneFilesInitOnce = U_INITONCE_INITIALIZER;
+@@ -1235,7 +1235,7 @@ UInitOnce gTimeZoneFilesInitOnce = U_INITONCE_INITIALIZER;
  static CharString *gTimeZoneFilesDirectory = NULL;
  
  #if U_POSIX_LOCALE || U_PLATFORM_USES_ONLY_WIN32_API
@@ -11,7 +11,7 @@ index 023186c8..9af0bb3c 100644
   static bool gCorrectedPOSIXLocaleHeapAllocated = false;
  #endif
  
-@@ -1251,7 +1251,7 @@ static UBool U_CALLCONV putil_cleanup(void)
+@@ -1258,7 +1258,7 @@ static UBool U_CALLCONV putil_cleanup(void)
  
  #if U_POSIX_LOCALE || U_PLATFORM_USES_ONLY_WIN32_API
      if (gCorrectedPOSIXLocale && gCorrectedPOSIXLocaleHeapAllocated) {

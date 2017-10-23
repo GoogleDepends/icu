@@ -6,7 +6,6 @@
 #if !UCONFIG_NO_FORMATTING && !UPRV_INCOMPLETE_CPP11_SUPPORT
 
 #include "uassert.h"
-#include "unicode/currunit.h"
 #include "unicode/numberformatter.h"
 #include "number_types.h"
 #include "number_decimalquantity.h"
