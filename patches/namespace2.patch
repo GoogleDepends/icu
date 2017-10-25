@@ -1,8 +1,8 @@
 diff --git a/source/i18n/number_decimfmtprops.h b/source/i18n/number_decimfmtprops.h
-index da762589..3e25966b 100644
+index a179d087..3e25966b 100644
 --- a/source/i18n/number_decimfmtprops.h
 +++ b/source/i18n/number_decimfmtprops.h
-@@ -16,21 +16,20 @@
+@@ -16,8 +16,6 @@
  #include "number_types.h"
  
  U_NAMESPACE_BEGIN
@@ -11,14 +11,7 @@ index da762589..3e25966b 100644
  
  // Export an explicit template instantiation of the LocalPointer that is used as a
  // data member of CurrencyPluralInfoWrapper.
- // (MSVC requires this, even though it should not be necessary.)
--// clang does not like it and requires that the instantiation be in 'icu'
--// namespace.
--#if defined (_MSC_VER) && !defined(__clang__)
-+#if defined (_MSC_VER)
- // Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
- #pragma warning(suppress: 4661)
- template class U_I18N_API LocalPointerBase<CurrencyPluralInfo>;
+@@ -29,6 +27,9 @@ template class U_I18N_API LocalPointerBase<CurrencyPluralInfo>;
  template class U_I18N_API LocalPointer<CurrencyPluralInfo>;
  #endif
  
@@ -29,10 +22,10 @@ index da762589..3e25966b 100644
  // Exported as U_I18N_API because it is a public member field of exported DecimalFormatProperties
  struct U_I18N_API CurrencyPluralInfoWrapper {
 diff --git a/source/i18n/number_patternmodifier.h b/source/i18n/number_patternmodifier.h
-index 7345863b..4a90df4c 100644
+index 3679ad1f..705037f0 100644
 --- a/source/i18n/number_patternmodifier.h
 +++ b/source/i18n/number_patternmodifier.h
-@@ -15,24 +15,23 @@
+@@ -15,11 +15,6 @@
  #include "number_utils.h"
  
  U_NAMESPACE_BEGIN
@@ -44,15 +37,14 @@ index 7345863b..4a90df4c 100644
  
  // Export an explicit template instantiation of the LocalPointer that is used as a
  // data member of ParameterizedModifier.
- // (MSVC requires this, even though it should not be necessary.)
--// clang does not like it and requires that the instantiation be in 'icu'
--// namespace.
--#if defined (_MSC_VER) && !defined(__clang__)
-+#if defined (_MSC_VER)
+@@ -27,10 +22,16 @@ class MutablePatternModifier;
+ #if defined (_MSC_VER)
  // Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
  #pragma warning(suppress: 4661)
- template class U_I18N_API LocalPointerBase<ParameterizedModifier>;
- template class U_I18N_API LocalPointer<ParameterizedModifier>;
+-template class U_I18N_API LocalPointerBase<ParameterizedModifier>;
+-template class U_I18N_API LocalPointer<ParameterizedModifier>;
++template class U_I18N_API LocalPointerBase<number::impl::ParameterizedModifier>;
++template class U_I18N_API LocalPointer<number::impl::ParameterizedModifier>;
  #endif
  
 +namespace number {
