@@ -22,7 +22,9 @@ namespace impl {
 // Export an explicit template instantiation of the LocalPointer that is used as a
 // data member of CurrencyPluralInfoWrapper.
 // (MSVC requires this, even though it should not be necessary.)
-#if defined (_MSC_VER)
+// clang does not like it and requires that the instantiation be in 'icu'
+// namespace.
+#if defined (_MSC_VER) && !defined(__clang__)
 // Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
 #pragma warning(suppress: 4661)
 template class U_I18N_API LocalPointerBase<CurrencyPluralInfo>;
