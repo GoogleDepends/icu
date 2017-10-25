@@ -22,8 +22,8 @@ U_NAMESPACE_BEGIN
 #if defined (_MSC_VER)
 // Ignore warning 4661 as LocalPointerBase does not use operator== or operator!=
 #pragma warning(suppress: 4661)
-template class U_I18N_API LocalPointerBase<ParameterizedModifier>;
-template class U_I18N_API LocalPointer<ParameterizedModifier>;
+template class U_I18N_API LocalPointerBase<number::impl::ParameterizedModifier>;
+template class U_I18N_API LocalPointer<number::impl::ParameterizedModifier>;
 #endif
 
 namespace number {
