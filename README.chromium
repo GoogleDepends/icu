@@ -279,9 +279,13 @@ D. Local Modifications
 
   - patches/loc_keyvaleu.patch
 
-7. Add 'using namespace' to several files to fix build failures on Windows
+7. Fix Windows build failures (namespace related)
 
    https://ssl.icu-project.org/trac/ticket/13411
+   http://bugs.icu-project.org/trac/ticket/13448
 
    - patches/namespace.patch taken from
      https://codereview.appspot.com/332050043
+
+   - patches/namespace2.patch
+
