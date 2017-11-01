@@ -25,19 +25,22 @@ GENRB_ALIAS_SOURCE = $(GENRB_SYNTHETIC_ALIAS)\
 # Ordinary resources
 GENRB_SOURCE =\
  am.txt\
- ar.txt\
- ar_DZ.txt ar_EH.txt ar_LB.txt ar_LY.txt ar_MA.txt ar_MR.txt ar_SA.txt\
- ar_SO.txt ar_TN.txt\
+ ar.txt ar_001.txt ar_AE.txt ar_BH.txt ar_DJ.txt\
+ ar_DZ.txt ar_EG.txt ar_EH.txt ar_ER.txt ar_IL.txt\
+ ar_IQ.txt ar_JO.txt ar_KM.txt ar_KW.txt ar_LB.txt\
+ ar_LY.txt ar_MA.txt ar_MR.txt ar_OM.txt ar_PS.txt\
+ ar_QA.txt ar_SA.txt ar_SD.txt ar_SO.txt ar_SS.txt\
+ ar_SY.txt ar_TD.txt ar_TN.txt ar_YE.txt\
  bg.txt\
  bn.txt\
  ca.txt\
  cs.txt\
  da.txt\
- de.txt de_AT.txt de_CH.txt\
+ de.txt de_AT.txt de_CH.txt de_LI.txt de_LU.txt\
  el.txt\
  en.txt en_001.txt en_150.txt\
- en_GB.txt en_US.txt en_AU.txt en_CA.txt en_HK.txt en_IN.txt en_NZ.txt\
- en_SG.txt en_ZA.txt\
+ en_GB.txt en_US.txt en_AU.txt en_CA.txt en_HK.txt en_IN.txt en_KE.txt\
+ en_NG.txt en_NZ.txt en_PH.txt en_SG.txt en_ZA.txt\
  es.txt es_ES.txt es_419.txt es_AR.txt es_MX.txt es_US.txt\
  es_BO.txt es_BR.txt es_BZ.txt es_CL.txt es_CO.txt es_CR.txt es_CU.txt\
  es_DO.txt es_EA.txt es_EC.txt es_GQ.txt es_GT.txt es_HN.txt es_IC.txt\
@@ -47,7 +50,7 @@ GENRB_SOURCE =\
  fa.txt\
  fi.txt\
  fil.txt\
- fr.txt fr_CA.txt fr_CH.txt\
+ fr.txt fr_BE.txt fr_CA.txt fr_CH.txt\
  gu.txt\
  he.txt\
  hi.txt\
