@@ -43,63 +43,42 @@ Pre-built data files are generated and checked in with the following steps
      is expected. See https://ssl.icu-project.org/trac/ticket/10570
 
   d. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/trim_data.sh
+       ${CHROME_ICU_TREE_TOP}/scripts/make_data_all.sh
 
-    The full locale data for Chrome's UI languages and their select variants
-    and the bare minimum locale data for other locales will be kept.
+     This script takes the following steps:
 
-  e. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/make_data.sh
+     i) scripts/trim_data.sh
+       The full locale data for Chrome's UI languages and their select variants
+       and the bare minimum locale data for other locales will be kept.
 
-     This makes icudt${version}l.dat.
+     ii) scripts/make_data.sh
+       This makes icudt${version}l.dat.
 
-  f. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/copy_data.sh common
+     iii)  scripts/copy_data.sh common
+       This copies the ICU data files for non-Android platforms
+       (both Little and Big Endian) to the following locations:
 
-     This copies the ICU data files for non-Android platforms
-     (both Little and Big Endian) to the following locations:
+       common/icudtl.dat
+       common/icudtb.dat
 
-     common/icudtl.dat
-     common/icudtb.dat
+     iv) android/patch_locale.sh
+       On top of trim_data.sh (step d), further cuts the data entries for
+       Android.
 
-  g. Run
-       ${CHROME_ICU_TREE_TOP}/android/patch_locale.sh
+     v) Repeat ii) and iii) for Android to get android/icudtl.dat
 
-    On top of trim_data.sh (step d), further cuts the data entries for Android.
+     vi) ios/patch_locale.sh
+       Further cuts the data size for iOS.
 
-  h. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/make_data.sh
+     vii) Repeat ii) and iii) for iOS to get ios/icudtl.dat
 
-     This makes icudt${version}l.dat for Android.
-
-  i. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/copy_data.sh android
-
-     This copies the icu data file for Android to the following location:
-
-     android/icudtl.dat
-
-  j. Run
-       ${CHROME_ICU_TREE_TOP}/ios/patch_locale.sh
-
-     Further cuts the data size for iOS.
-
-  k. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/make_data.sh
-
-     This makes icudt${version}l.dat for iOS.
-
-  l. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/copy_data.sh ios
-
-  m. Run
-       ${CHROME_ICU_TREE_TOP}/scripts/clean_up_data_source.sh
+     viii) scripts/clean_up_data_source.sh
 
      This reverts the result of trim_data.sh and patch_locale.sh and
      make the tree ready for committing updated ICU data files for
      non-Android and Android platforms.
 
-  n. Whenever data is updated (e.g timezone update), follow d ~ m as long
+  e. Whenever data is updated (e.g timezone update), take step d as long
   as the ICU build directory used in a ~ c is kept. Besides, icudt.dll for
   Windows has to be udpated following the procedure described below.
 
@@ -245,9 +224,9 @@ D. Local Modifications
      windowsZones.txt
      zoneinfo64.txt
 
-  As of Oct 23, 2017, the latest version is 2017b and the above files
+  As of Oct 23, 2017, the latest version is 2017c and the above files
   are available at
-  http://source.icu-project.org/repos/icu/data/trunk/tzdata/icunew/2017b/44/
+  http://source.icu-project.org/repos/icu/data/trunk/tzdata/icunew/2017c/44/
 
 4. Build-related changes
 
@@ -264,10 +243,3 @@ D. Local Modifications
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
-
-5. C++ 11 does not allow a string literal to be assigned to a variable
-   of char*.
-
-   https://ssl.icu-project.org/trac/ticket/13192
-
-   - patches/string_literal_charptr.patch
