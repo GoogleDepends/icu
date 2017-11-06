@@ -109,7 +109,7 @@ fil{
         EZ{"Eurozone"}
         FI{"Finland"}
         FJ{"Fiji"}
-        FK{"Falkland Islands"}
+        FK{"Falkland Islands (Islas Malvinas)"}
         FM{"Micronesia"}
         FO{"Faroe Islands"}
         FR{"France"}
@@ -132,7 +132,7 @@ fil{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong SAR China"}
+        HK{"Hong Kong"}
         HM{"Heard & McDonald Islands"}
         HN{"Honduras"}
         HR{"Croatia"}
@@ -182,11 +182,11 @@ fil{
         MF{"Saint Martin"}
         MG{"Madagascar"}
         MH{"Marshall Islands"}
-        MK{"Macedonia"}
+        MK{"Macedonia (FYROM)"}
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macau SAR China"}
+        MO{"Macau"}
         MP{"Northern Mariana Islands"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -221,7 +221,7 @@ fil{
         PM{"St. Pierre & Miquelon"}
         PN{"Pitcairn Islands"}
         PR{"Puerto Rico"}
-        PS{"Palestinian Territories"}
+        PS{"Palestine"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -296,9 +296,6 @@ fil{
     }
     Countries%short{
         GB{"U.K."}
-        HK{"Hong Kong"}
-        MO{"Macau"}
-        PS{"Palestine"}
         UN{"UN"}
         US{"U.S."}
     }
@@ -307,8 +304,6 @@ fil{
         CG{"Congo (Republika)"}
         CI{"Ivory Coast"}
         CZ{"Czech Republic"}
-        FK{"Falkland Islands (Islas Malvinas)"}
-        MK{"Macedonia (FYROM)"}
         TL{"East Timor"}
     }
     Version{"2.1.37.1"}
