@@ -101,7 +101,7 @@ GENRB_SOURCE =\
  pt_GQ.txt pt_GW.txt pt_LU.txt pt_MO.txt pt_MZ.txt\
  pt_PT.txt pt_ST.txt pt_TL.txt\
  ro.txt\
- ru.txt\
+ ru.txt ru_BY.txt ru_KG.txt ru_KZ.txt ru_MD.txt ru_RU.txt ru_UA.txt\
  sk.txt\
  sl.txt\
  sr.txt\
