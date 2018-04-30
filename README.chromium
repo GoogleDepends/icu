@@ -14,13 +14,12 @@ A. How to update ICU
    It does preserve Chrome-specific build files (*local.mk) and
    converter files. (see section C)
 
-2. Update the source file lists for i18n and common
-   in icu.gypi and BUILD.gn. See the comments in the files.
+   BUILD.gn and icu.gyp* files are automatically updated, too.
 
-3. Review and apply patches/changes in "D. Local Modifications" if
+2. Review and apply patches/changes in "D. Local Modifications" if
    necessary/applicable. Update patch files in patches/.
 
-4. Follow the instructions in section B on building ICU data files
+3. Follow the instructions in section B on building ICU data files
 
 
 B. How to build ICU data files

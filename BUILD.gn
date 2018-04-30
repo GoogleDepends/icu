@@ -112,6 +112,7 @@ component("icui18n") {
   # find  source/i18n -maxdepth 1  ! -type d  | egrep  '\.(c|cpp|h)$' |\
   # sort | sed 's/^\(.*\)$/    "\1",/'
   sources = [
+    # I18N_SRC_START
     "source/i18n/affixpatternparser.cpp",
     "source/i18n/affixpatternparser.h",
     "source/i18n/alphaindex.cpp",
@@ -480,11 +481,13 @@ component("icui18n") {
     "source/i18n/zrule.h",
     "source/i18n/ztrans.cpp",
     "source/i18n/ztrans.h",
+    # I18N_SRC_END
   ]
   # ls source/i18n/unicode/*h | sort | sed 's/^\(.*\)$/    "\1",/'
   public = [
     # crbug.com/726654: Make astro.h public until the upstream adds an API.
     "source/i18n/astro.h",
+    # I18N_HDR_START
     "source/i18n/unicode/alphaindex.h",
     "source/i18n/unicode/basictz.h",
     "source/i18n/unicode/calendar.h",
@@ -565,6 +568,7 @@ component("icui18n") {
     "source/i18n/unicode/utmscale.h",
     "source/i18n/unicode/utrans.h",
     "source/i18n/unicode/vtzone.h",
+    # I18N_HDR_END
   ]
 
   defines = [ "U_I18N_IMPLEMENTATION" ]
@@ -596,6 +600,7 @@ component("icuuc") {
   # find  source/common -maxdepth 1  ! -type d  | egrep  '\.(c|cpp|h)$' |\
   # sort | sed 's/^\(.*\)$/    "\1",/'
   sources = [
+    # COMMON_SRC_START
     "source/common/appendable.cpp",
     "source/common/bmpset.cpp",
     "source/common/bmpset.h",
@@ -885,10 +890,12 @@ component("icuuc") {
     "source/common/uvectr64.h",
     "source/common/wintz.cpp",
     "source/common/wintz.h",
+    # COMMON_SRC_END
   ]
 
   # ls  source/common/unicode/*h | sort | sed 's/^\(.*\)$/    "\1",/'
   public = [
+    # COMMON_HDR_START
     "source/common/unicode/appendable.h",
     "source/common/unicode/brkiter.h",
     "source/common/unicode/bytestream.h",
@@ -985,6 +992,7 @@ component("icuuc") {
     "source/common/unicode/utypes.h",
     "source/common/unicode/uvernum.h",
     "source/common/unicode/uversion.h",
+    # COMMON_HDR_END
   ]
   defines = [ "U_COMMON_IMPLEMENTATION" ]
   deps = [

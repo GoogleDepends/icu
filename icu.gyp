@@ -505,6 +505,7 @@
               # This list can easily be updated using the command below:
               # ls source/i18n/unicode/*h | sort | \
               # sed "s/^.*i18n\/\(.*\)$/              '\1',/"
+	      # I18N_HDR_START
               'unicode/alphaindex.h',
               'unicode/basictz.h',
               'unicode/calendar.h',
@@ -585,6 +586,7 @@
               'unicode/utmscale.h',
               'unicode/utrans.h',
               'unicode/vtzone.h',
+	      # I18N_HDR_END
             ],
           },
           'includes': [
@@ -603,6 +605,7 @@
               # This list can easily be updated using the command below:
               # ls source/common/unicode/*h | sort | \
               # sed "s/^.*common\/\(.*\)$/              '\1',/"
+	      # COMMON_HDR_START
               'unicode/appendable.h',
               'unicode/brkiter.h',
               'unicode/bytestream.h',
@@ -699,6 +702,7 @@
               'unicode/utypes.h',
               'unicode/uvernum.h',
               'unicode/uversion.h',
+	      # COMMON_HDR_END
             ],
           },
           'includes': [

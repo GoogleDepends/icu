@@ -7,6 +7,7 @@
 # find  source/i18n -maxdepth 1  ! -type d  | egrep  '\.(c|cpp)$' | \
 # sort | sed "s/^\(.*\)$/      '\1',/"
     'icui18n_sources': [
+      # I18N_SRC_START
       'source/i18n/affixpatternparser.cpp',
       'source/i18n/alphaindex.cpp',
       'source/i18n/anytrans.cpp',
@@ -221,10 +222,12 @@
       'source/i18n/zonemeta.cpp',
       'source/i18n/zrule.cpp',
       'source/i18n/ztrans.cpp',
+      # I18N_SRC_END
     ],
     'icuuc_sources': [
 # find  source/common -maxdepth 1  ! -type d  | egrep  '\.(c|cpp)$' | \
 # sort | sed "s/^\(.*\)$/      '\1',/"
+      # COMMON_SRC_START
       'source/common/appendable.cpp',
       'source/common/bmpset.cpp',
       'source/common/brkeng.cpp',
@@ -411,6 +414,7 @@
       'source/common/uvectr32.cpp',
       'source/common/uvectr64.cpp',
       'source/common/wintz.cpp',
+      # COMMON_SRC_END
     ]
   }
 }
