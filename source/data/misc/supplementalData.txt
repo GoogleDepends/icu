@@ -16567,8 +16567,8 @@ supplementalData:table(nofallback){
     languageMatching{
         written{
             {
-                "no",
                 "nb",
+                "no",
                 "99",
                 "0",
             }
@@ -17066,13 +17066,13 @@ supplementalData:table(nofallback){
             }
             {
                 "nn",
-                "nb",
+                "no",
                 "90",
                 "0",
             }
             {
                 "nn",
-                "no",
+                "nb",
                 "90",
                 "1",
             }
