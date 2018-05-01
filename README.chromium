@@ -277,3 +277,11 @@ D. Local Modifications
     https://ssl.icu-project.org/trac/ticket/13721
     https://ssl.icu-project.org/trac/ticket/13720
     https://ssl.icu-project.org/trac/ticket/13719
+
+9. Fixes for build failures
+
+  - patches/pnacl_double.patch
+  - patches/msvc_numgroup.patch
+  - upstream bugs:
+    https://ssl.icu-project.org/trac/ticket/13750
+    https://ssl.icu-project.org/trac/ticket/13752

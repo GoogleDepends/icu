@@ -48,6 +48,8 @@ Grouper Grouper::forStrategy(UGroupingStrategy grouping) {
         return {3, 3, 1};
     default:
         U_ASSERT(FALSE);
+        // To silence C4715 (not all codepath return a value) in MSVC.
+        return {-1, -1, -2};
     }
 }
 
