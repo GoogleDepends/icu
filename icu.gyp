@@ -292,10 +292,6 @@
               # ICU has some code with the pattern:
               #   if (found = uprv_getWindowsTimeZoneInfo(...))
               '-Wno-parentheses',
-	      # https://github.com/google/double-conversion/issues/66
-	      # double conversion library uses an unused typedef for compile
-	      # time assertion.
-	      '-Wno-unused-local-typedef',
             ],
           },
           # Since ICU wants to internally use its own deprecated APIs, don't

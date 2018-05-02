@@ -103,10 +103,12 @@ inline void abort_noreturn() { abort(); }
 #error Target architecture was not detected as supported by Double-Conversion.
 #endif
 
-#if defined(__GNUC__)
-#define DOUBLE_CONVERSION_UNUSED __attribute__((unused))
+#if __cplusplus >= 201103L
+#define DOUBLE_CONVERSION_STATIC_ASSERT(expr, msg) static_assert(expr, #msg)
 #else
-#define DOUBLE_CONVERSION_UNUSED
+#define DOUBLE_CONVERSION_STATIC_ASSERT (expr, msg) \
+typedef char StaticAssert[bool(expr) ? 1 : -1]; \
+(void) msg
 #endif
 
 #if defined(_WIN32) && !defined(__MINGW32__)
@@ -338,8 +340,8 @@ template <class Dest, class Source>
 inline Dest BitCast(const Source& source) {
   // Compile time assertion: sizeof(Dest) == sizeof(Source)
   // A compile error here means your Dest and Source have different sizes.
-  DOUBLE_CONVERSION_UNUSED
-      typedef char VerifySizesAreEqual[sizeof(Dest) == sizeof(Source) ? 1 : -1];
+  DOUBLE_CONVERSION_STATIC_ASSERT(sizeof(Dest) == sizeof(Source),
+                                  "source and destination size mismatch");
 
   Dest dest;
   memmove(&dest, &source, sizeof(dest));

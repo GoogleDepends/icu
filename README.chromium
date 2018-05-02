@@ -278,10 +278,15 @@ D. Local Modifications
     https://ssl.icu-project.org/trac/ticket/13720
     https://ssl.icu-project.org/trac/ticket/13719
 
-9. Fixes for build failures
+9. Double conversion library build failure
 
-  - patches/pnacl_double.patch
-  - patches/msvc_numgroup.patch
+  - patches/double_conversion.patch
   - upstream bugs:
     https://ssl.icu-project.org/trac/ticket/13750
+    https://github.com/google/double-conversion/issues/66
+
+10. MSVC C4715 warning (treated as error)
+
+  - patches/msvc_numgroup.patch  (fixed in 62-to-be)
+  - upstream bug:
     https://ssl.icu-project.org/trac/ticket/13752

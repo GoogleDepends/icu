@@ -106,14 +106,6 @@ config("icu_code") {
       "-Wno-deprecated-declarations",
     ]
   }
-  if (is_clang && is_win) {
-    cflags += [
-      # See https://github.com/google/double-conversion/issues/66
-      # double conversion library included in ICU uses a compile-time
-      # assertion with typedef hack.
-      "-Wno-unused-local-typedef",
-    ]
-  }
 }
 
 component("icui18n") {
