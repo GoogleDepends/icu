@@ -92,7 +92,7 @@
       'source/common',
       'source/i18n',
     ],
-    'msvs_disabled_warnings': [4005, 4068, 4355, 4996, 4267],
+    'msvs_disabled_warnings': [4005, 4068, 4267],
   },
   'conditions': [
     ['use_system_icu==0 or want_separate_host_toolset==1', {
@@ -337,8 +337,6 @@
               'msvs_settings': {
                 'VCCLCompilerTool': {
                   'AdditionalOptions': [
-                    # See http://bugs.icu-project.org/trac/ticket/11122
-                    '-Wno-inline-new-delete',
                     '-Wno-implicit-exception-spec-mismatch',
                   ],
                 },
@@ -450,8 +448,6 @@
               'msvs_settings': {
                 'VCCLCompilerTool': {
                   'AdditionalOptions': [
-                    # See http://bugs.icu-project.org/trac/ticket/11122
-                    '-Wno-inline-new-delete',
                     '-Wno-implicit-exception-spec-mismatch',
                   ],
                 },
