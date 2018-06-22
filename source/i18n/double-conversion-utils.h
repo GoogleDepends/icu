@@ -75,9 +75,9 @@ inline void abort_noreturn() { abort(); }
 // the output of the division with the expected result. (Inlining must be
 // disabled.)
 // On Linux,x86 89255e-22 != Div_double(89255.0/1e22)
-// ICU PATCH: Enable ARM builds for Windows with 'defined(_M_ARM)'.
+// ICU PATCH: Enable ARM32 & ARM64 builds for Windows with 'defined(_M_ARM) || defined(_M_ARM64)'.
 #if defined(_M_X64) || defined(__x86_64__) || \
-    defined(__ARMEL__) || defined(__avr32__) || defined(_M_ARM) || \
+    defined(__ARMEL__) || defined(__avr32__) || defined(_M_ARM) || defined(_M_ARM64) || \
     defined(__hppa__) || defined(__ia64__) || \
     defined(__mips__) || \
     defined(__powerpc__) || defined(__ppc__) || defined(__ppc64__) || \
@@ -97,10 +97,14 @@ inline void abort_noreturn() { abort(); }
 #else
 #undef DOUBLE_CONVERSION_CORRECT_DOUBLE_OPERATIONS
 #endif  // _WIN32
-#elif U_PLATFORM == U_PF_BROWSER_NATIVE_CLIENT
-#undef DOUBLE_CONVERSION_CORRECT_DOUBLE_OPERATIONS
 #else
 #error Target architecture was not detected as supported by Double-Conversion.
+#endif
+
+#if defined(__GNUC__)
+#define DOUBLE_CONVERSION_UNUSED __attribute__((unused))
+#else
+#define DOUBLE_CONVERSION_UNUSED
 #endif
 
 #if defined(_WIN32) && !defined(__MINGW32__)
@@ -332,12 +336,8 @@ template <class Dest, class Source>
 inline Dest BitCast(const Source& source) {
   // Compile time assertion: sizeof(Dest) == sizeof(Source)
   // A compile error here means your Dest and Source have different sizes.
-#if __cplusplus >= 201103L
-  static_assert(sizeof(Dest) == sizeof(Source),
-                "source and destination size mismatch");
-#else
-  typedef char StaticAssert[sizeof(Dest) == sizeof(Source) ? 1 : -1];
-#endif
+  DOUBLE_CONVERSION_UNUSED
+      typedef char VerifySizesAreEqual[sizeof(Dest) == sizeof(Source) ? 1 : -1];
 
   Dest dest;
   memmove(&dest, &source, sizeof(dest));

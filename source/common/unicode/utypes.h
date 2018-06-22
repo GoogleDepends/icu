@@ -307,11 +307,7 @@ typedef double UDate;
 #define U_IO_API
 #define U_TOOLUTIL_API
 #elif defined(U_COMMON_IMPLEMENTATION)
-#if defined(U_ICUDATAENTRY_IN_COMMON)
-#define U_DATA_API     U_EXPORT
-#else
 #define U_DATA_API     U_IMPORT
-#endif
 #define U_COMMON_API   U_EXPORT
 #define U_I18N_API     U_IMPORT
 #define U_LAYOUT_API   U_IMPORT
@@ -546,12 +542,15 @@ typedef enum UErrorCode {
 #ifndef U_HIDE_DRAFT_API
     U_NUMBER_ARG_OUTOFBOUNDS_ERROR,   /**< The argument to a NumberFormatter helper method was out of bounds; the bounds are usually 0 to 999. @draft ICU 61 */
 #endif  // U_HIDE_DRAFT_API
+#ifndef U_HIDE_DRAFT_API
+    U_NUMBER_SKELETON_SYNTAX_ERROR,   /**< The number skeleton passed to C++ NumberFormatter or C UNumberFormatter was invalid or contained a syntax error. @draft ICU 62 */
+#endif  // U_HIDE_DRAFT_API
 #ifndef U_HIDE_DEPRECATED_API
     /**
      * One more than the highest normal formatting API error code.
      * @deprecated ICU 58 The numeric value may change over time, see ICU ticket #12420.
      */
-    U_FMT_PARSE_ERROR_LIMIT = 0x10113,
+    U_FMT_PARSE_ERROR_LIMIT = 0x10114,
 #endif  // U_HIDE_DEPRECATED_API
 
     /*

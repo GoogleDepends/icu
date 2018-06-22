@@ -32,7 +32,6 @@
 #include "cmemory.h"
 #include "unicode/uloc.h"
 
-#if 0
 #if U_PLATFORM == U_PF_WINDOWS && defined(_MSC_VER) && (_MSC_VER >= 1500)
 /*
  * TODO: It seems like we should widen this to
@@ -45,7 +44,6 @@
 #define USE_WINDOWS_LCID_MAPPING_API
 #include <windows.h>
 #include <winnls.h>
-#endif
 #endif
 
 /*
@@ -1017,7 +1015,7 @@ static const char*
 getPosixID(const ILcidPosixMap *this_0, uint32_t hostID)
 {
     uint32_t i;
-    for (i = 0; i <= this_0->numRegions; i++)
+    for (i = 0; i < this_0->numRegions; i++)
     {
         if (this_0->regionMaps[i].hostID == hostID)
         {

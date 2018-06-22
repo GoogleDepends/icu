@@ -205,7 +205,7 @@ ko{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
-    Version{"2.1.39.20"}
+    Version{"2.1.41.97"}
     calendar{
         buddhist{
             eras{
@@ -1375,7 +1375,7 @@ ko{
                     y{"y. M. d. (E) ~ y. M. d. (E)"}
                 }
                 yMMM{
-                    M{"y년 M월 ~ M월"}
+                    M{"y년 M월~M월"}
                     y{"y년 M월 ~ y년 M월"}
                 }
                 yMMMEEEEd{
@@ -1394,7 +1394,7 @@ ko{
                 }
                 yMMMd{
                     M{"y년 M월 d일 ~ M월 d일"}
-                    d{"y년 M월 d일 ~ d일"}
+                    d{"y년 M월 d일~d일"}
                     y{"y년 M월 d일 ~ y년 M월 d일"}
                 }
                 yMd{
