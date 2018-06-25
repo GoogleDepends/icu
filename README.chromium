@@ -269,3 +269,10 @@ D. Local Modifications
   - upstream bugs:
     https://ssl.icu-project.org/trac/ticket/13750
     https://github.com/google/double-conversion/issues/66
+
+9. Cherry-pick Greek lowercase fix from the upstream
+
+  - patches/greek_lowercase.patch
+  - upstream bug (fixed in 62.2-to-be)
+    https://ssl.icu-project.org/trac/ticket/13851
+
