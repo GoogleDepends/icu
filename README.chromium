@@ -276,3 +276,9 @@ D. Local Modifications
   - upstream bug (fixed in 62.2-to-be)
     https://ssl.icu-project.org/trac/ticket/13851
 
+10. Max significant digit is always 6
+
+  - patches/nf_maxsig.patch
+  - upstream bug:
+    https://ssl.icu-project.org/trac/ticket/13852
+
