@@ -1,11 +1,11 @@
 Name: icu
-URL: http://site.icu-project.org/
-Version: 62.1
+URL: https://github.com/unicode-org/icu
+Version: 63.1
 License: MIT
 Security Critical: yes
 
 Description:
-This directory contains the source code of ICU 62.1 for C/C++.
+This directory contains the source code of ICU 63.1 for C/C++.
 
 A. How to update ICU
 
