@@ -325,9 +325,9 @@ foundBest:
                         // two characters after uc were not 0x0E4C THANTHAKHAT before
                         // checking the dictionary. That is just a performance filter,
                         // but it's not clear it's faster than checking the trie.
-                        int32_t candidates = words[(wordsFound + 1) % THAI_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
+                        int32_t num_candidates = words[(wordsFound + 1) % THAI_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
                         utext_setNativeIndex(text, current + cuWordLength + chars);
-                        if (candidates > 0) {
+                        if (num_candidates > 0) {
                             break;
                         }
                     }
@@ -555,9 +555,9 @@ foundBest:
                     if (fEndWordSet.contains(pc) && fBeginWordSet.contains(uc)) {
                         // Maybe. See if it's in the dictionary.
                         // TODO: this looks iffy; compare with old code.
-                        int32_t candidates = words[(wordsFound + 1) % LAO_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
+                        int32_t num_candidates = words[(wordsFound + 1) % LAO_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
                         utext_setNativeIndex(text, current + cuWordLength + chars);
-                        if (candidates > 0) {
+                        if (num_candidates > 0) {
                             break;
                         }
                     }
@@ -748,9 +748,9 @@ foundBest:
                     if (fEndWordSet.contains(pc) && fBeginWordSet.contains(uc)) {
                         // Maybe. See if it's in the dictionary.
                         // TODO: this looks iffy; compare with old code.
-                        int32_t candidates = words[(wordsFound + 1) % BURMESE_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
+                        int32_t num_candidates = words[(wordsFound + 1) % BURMESE_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
                         utext_setNativeIndex(text, current + cuWordLength + chars);
-                        if (candidates > 0) {
+                        if (num_candidates > 0) {
                             break;
                         }
                     }
@@ -807,11 +807,11 @@ foundBest:
 static const int32_t KHMER_LOOKAHEAD = 3;
 
 // Will not combine a non-word with a preceding dictionary word longer than this
-static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 10;
+static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 3;
 
 // Will not combine a non-word that shares at least this much prefix with a
 // dictionary word, with a preceding word
-static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 5;
+static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 3;
 
 // Minimum word size
 static const int32_t KHMER_MIN_WORD = 2;
@@ -953,9 +953,9 @@ foundBest:
                     uc = utext_current32(text);
                     if (fEndWordSet.contains(pc) && fBeginWordSet.contains(uc)) {
                         // Maybe. See if it's in the dictionary.
-                        int32_t candidates = words[(wordsFound + 1) % KHMER_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
+                        int32_t num_candidates = words[(wordsFound + 1) % KHMER_LOOKAHEAD].candidates(text, fDictionary, rangeEnd);
                         utext_setNativeIndex(text, current+cuWordLength+chars);
-                        if (candidates > 0) {
+                        if (num_candidates > 0) {
                             break;
                         }
                     }
