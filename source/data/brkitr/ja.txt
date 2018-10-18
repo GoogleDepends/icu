@@ -3,7 +3,7 @@
 ja{
     Version{"2.1.44.56"}
     boundaries{
-        line:process(dependency){"line_normal.brk"}
+        line:process(dependency){"line_normal_cj.brk"}
         line_loose:process(dependency){"line_loose_cj.brk"}
         line_normal:process(dependency){"line_normal_cj.brk"}
         line_strict:process(dependency){"line.brk"}
