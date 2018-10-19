@@ -109,6 +109,12 @@ config("icu_code") {
       "-Wno-deprecated-declarations",
     ]
   }
+  if (is_clang && is_win) {
+    cflags += [
+      # umutex.h and numberrangeformatter.h
+      "-Wno-instantiation-after-specialization",
+    ]
+  }
 }
 
 component("icui18n") {
