@@ -237,3 +237,9 @@ D. Local Modifications
   - upstream bugs:
     https://unicode-org.atlassian.net/browse/ICU-13750
     https://github.com/google/double-conversion/issues/66
+
+7. Fix std::atomic related compilation issue
+
+  - patches/atomic_win.patch
+  - upstream bugs:
+    https://unicode-org.atlassian.net/browse/ICU-20222
