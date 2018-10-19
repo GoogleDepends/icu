@@ -42,8 +42,6 @@ function rewrite_data_makefile {
 function build_data {
   make clean
   make
-  sed -i 's/root_subset.res/root.res/' out/tmp/icudata.lst
-  make
 }
 
 # Copy a single pool.res to the source tree and emit the sizes
