@@ -188,7 +188,9 @@ class NumberRangeFormatterImpl;
 #if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN && !defined(U_IN_DOXYGEN)
 } // namespace number
 U_NAMESPACE_END
-template struct U_I18N_API std::atomic<impl::NumberRangeFormatterImpl*>;
+
+template struct U_I18N_API std::atomic<icu::number::impl::NumberRangeFormatterImpl*>;
+
 U_NAMESPACE_BEGIN
 namespace number {  // icu::number
 #endif
