@@ -1,8 +1,8 @@
 diff --git a/source/common/umutex.h b/source/common/umutex.h
-index 015a12f9..aa73908a 100644
+index 015a12f9..b5962e99 100644
 --- a/source/common/umutex.h
 +++ b/source/common/umutex.h
-@@ -54,15 +54,15 @@ U_NAMESPACE_END
+@@ -54,15 +54,19 @@ U_NAMESPACE_END
  
  #include <atomic>
  
@@ -12,8 +12,14 @@ index 015a12f9..aa73908a 100644
 +// Export an explicit template instantiation of std::atomic<int32_t>.
  // When building DLLs for Windows this is required as it is used as a data member of the exported SharedObject class.
  // See digitlst.h, pluralaffix.h, datefmt.h, and others for similar examples.
- #if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
- template struct U_COMMON_API std::atomic<int32_t>;
+-#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
+-template struct U_COMMON_API std::atomic<int32_t>;
++#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN && !defined(U_IN_DOXYGEN)
++  #if defined(__clang__) && __has_warning("-Winstantiation-after-specialization")
++    // Suppress the warning that the explicit instantiation after explicit specialization has no effect.
++    #pragma clang diagnostic ignored "-Winstantiation-after-specialization"
++  #endif
++template <> struct U_COMMON_API std::atomic<int32_t>;
  #endif
  
 +U_NAMESPACE_BEGIN
