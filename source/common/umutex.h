@@ -57,8 +57,12 @@ U_NAMESPACE_END
 // Export an explicit template instantiation of std::atomic<int32_t>.
 // When building DLLs for Windows this is required as it is used as a data member of the exported SharedObject class.
 // See digitlst.h, pluralaffix.h, datefmt.h, and others for similar examples.
-#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN
-template struct U_COMMON_API std::atomic<int32_t>;
+#if U_PF_WINDOWS <= U_PLATFORM && U_PLATFORM <= U_PF_CYGWIN && !defined(U_IN_DOXYGEN)
+  #if defined(__clang__) && __has_warning("-Winstantiation-after-specialization")
+    // Suppress the warning that the explicit instantiation after explicit specialization has no effect.
+    #pragma clang diagnostic ignored "-Winstantiation-after-specialization"
+  #endif
+template <> struct U_COMMON_API std::atomic<int32_t>;
 #endif
 
 U_NAMESPACE_BEGIN
