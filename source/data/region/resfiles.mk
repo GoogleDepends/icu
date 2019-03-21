@@ -1,7 +1,13 @@
 # © 2016 and later: Unicode, Inc. and others.
 # License & terms of use: http://www.unicode.org/copyright.html#License
-REGION_CLDR_VERSION = 34
-# A list of txt's to build
+REGION_CLDR_VERSION = 35
+#
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# NOTE (January 2019): Please use ICU's new data filtering to select locale
+# files.  This makefile is no longer used to filter locale files.
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+# Old description: A list of txt's to build
 # Note:
 #
 #   If you are thinking of modifying this file, READ THIS.
@@ -48,12 +54,12 @@ REGION_ALIAS_SOURCE = $(REGION_SYNTHETIC_ALIAS)
 
 # Ordinary resources
 REGION_SOURCE = af.txt agq.txt ak.txt am.txt\
- ar.txt ar_AE.txt ar_LY.txt ar_SA.txt ar_XB.txt\
- as.txt asa.txt ast.txt az.txt az_Cyrl.txt\
- az_Latn.txt bas.txt be.txt bem.txt bez.txt\
- bg.txt bm.txt bn.txt bn_IN.txt bo.txt\
- bo_IN.txt br.txt brx.txt bs.txt bs_Cyrl.txt\
- bs_Latn.txt ca.txt ccp.txt ce.txt cgg.txt\
+ ar.txt ar_AE.txt ar_LY.txt ar_SA.txt as.txt\
+ asa.txt ast.txt az.txt az_Cyrl.txt az_Latn.txt\
+ bas.txt be.txt bem.txt bez.txt bg.txt\
+ bm.txt bn.txt bn_IN.txt bo.txt bo_IN.txt\
+ br.txt brx.txt bs.txt bs_Cyrl.txt bs_Latn.txt\
+ ca.txt ccp.txt ce.txt ceb.txt cgg.txt\
  chr.txt ckb.txt cs.txt cy.txt da.txt\
  dav.txt de.txt de_AT.txt de_CH.txt dje.txt\
  dsb.txt dua.txt dyo.txt dz.txt ebu.txt\
@@ -75,52 +81,53 @@ REGION_SOURCE = af.txt agq.txt ak.txt am.txt\
  en_SE.txt en_SG.txt en_SH.txt en_SI.txt en_SL.txt\
  en_SS.txt en_SX.txt en_SZ.txt en_TC.txt en_TK.txt\
  en_TO.txt en_TT.txt en_TV.txt en_TZ.txt en_UG.txt\
- en_VC.txt en_VG.txt en_VU.txt en_WS.txt en_XA.txt\
- en_ZA.txt en_ZM.txt en_ZW.txt eo.txt es.txt\
- es_419.txt es_AR.txt es_BO.txt es_BR.txt es_BZ.txt\
- es_CL.txt es_CO.txt es_CR.txt es_CU.txt es_DO.txt\
- es_EC.txt es_GT.txt es_HN.txt es_MX.txt es_NI.txt\
- es_PA.txt es_PE.txt es_PR.txt es_PY.txt es_SV.txt\
- es_US.txt es_UY.txt es_VE.txt et.txt eu.txt\
- ewo.txt fa.txt fa_AF.txt ff.txt fi.txt\
+ en_VC.txt en_VG.txt en_VU.txt en_WS.txt en_ZA.txt\
+ en_ZM.txt en_ZW.txt eo.txt es.txt es_419.txt\
+ es_AR.txt es_BO.txt es_BR.txt es_BZ.txt es_CL.txt\
+ es_CO.txt es_CR.txt es_CU.txt es_DO.txt es_EC.txt\
+ es_GT.txt es_HN.txt es_MX.txt es_NI.txt es_PA.txt\
+ es_PE.txt es_PR.txt es_PY.txt es_SV.txt es_US.txt\
+ es_UY.txt es_VE.txt et.txt eu.txt ewo.txt\
+ fa.txt fa_AF.txt ff.txt ff_Latn.txt fi.txt\
  fil.txt fo.txt fr.txt fr_BE.txt fr_CA.txt\
  fur.txt fy.txt ga.txt gd.txt gl.txt\
  gsw.txt gu.txt guz.txt gv.txt ha.txt\
- haw.txt he.txt hi.txt hr.txt hsb.txt\
- hu.txt hy.txt ia.txt id.txt ig.txt\
- ii.txt is.txt it.txt ja.txt jgo.txt\
- jmc.txt jv.txt ka.txt kab.txt kam.txt\
- kde.txt kea.txt khq.txt ki.txt kk.txt\
- kkj.txt kl.txt kln.txt km.txt kn.txt\
- ko.txt ko_KP.txt kok.txt ks.txt ksb.txt\
- ksf.txt ksh.txt ku.txt kw.txt ky.txt\
- lag.txt lb.txt lg.txt lkt.txt ln.txt\
- lo.txt lrc.txt lt.txt lu.txt luo.txt\
- luy.txt lv.txt mas.txt mer.txt mfe.txt\
- mg.txt mgh.txt mgo.txt mi.txt mk.txt\
- ml.txt mn.txt mr.txt ms.txt mt.txt\
- mua.txt my.txt mzn.txt naq.txt nb.txt\
- nd.txt nds.txt ne.txt nl.txt nmg.txt\
- nn.txt nnh.txt nus.txt nyn.txt om.txt\
- or.txt os.txt pa.txt pa_Arab.txt pa_Guru.txt\
- pl.txt ps.txt pt.txt pt_AO.txt pt_CH.txt\
- pt_CV.txt pt_GQ.txt pt_GW.txt pt_LU.txt pt_MO.txt\
- pt_MZ.txt pt_PT.txt pt_ST.txt pt_TL.txt qu.txt\
- rm.txt rn.txt ro.txt ro_MD.txt rof.txt\
- ru.txt ru_UA.txt rw.txt rwk.txt sah.txt\
- saq.txt sbp.txt sd.txt se.txt se_FI.txt\
- seh.txt ses.txt sg.txt shi.txt shi_Latn.txt\
- shi_Tfng.txt si.txt sk.txt sl.txt smn.txt\
- sn.txt so.txt sq.txt sr.txt sr_Cyrl.txt\
- sr_Cyrl_BA.txt sr_Cyrl_ME.txt sr_Cyrl_XK.txt sr_Latn.txt sr_Latn_BA.txt\
- sr_Latn_ME.txt sr_Latn_XK.txt sv.txt sw.txt sw_CD.txt\
- sw_KE.txt ta.txt te.txt teo.txt tg.txt\
- th.txt ti.txt tk.txt to.txt tr.txt\
- tt.txt twq.txt tzm.txt ug.txt uk.txt\
- ur.txt ur_IN.txt uz.txt uz_Arab.txt uz_Cyrl.txt\
- uz_Latn.txt vai.txt vai_Latn.txt vai_Vaii.txt vi.txt\
- vun.txt wae.txt wo.txt xh.txt xog.txt\
- yav.txt yi.txt yo.txt yo_BJ.txt yue.txt\
- yue_Hans.txt yue_Hant.txt zgh.txt zh.txt zh_Hans.txt\
- zh_Hant.txt zh_Hant_HK.txt zh_Hant_MO.txt zu.txt
+ ha_NE.txt haw.txt he.txt hi.txt hr.txt\
+ hsb.txt hu.txt hy.txt ia.txt id.txt\
+ ig.txt ii.txt is.txt it.txt ja.txt\
+ jgo.txt jmc.txt jv.txt ka.txt kab.txt\
+ kam.txt kde.txt kea.txt khq.txt ki.txt\
+ kk.txt kkj.txt kl.txt kln.txt km.txt\
+ kn.txt ko.txt ko_KP.txt kok.txt ks.txt\
+ ksb.txt ksf.txt ksh.txt ku.txt kw.txt\
+ ky.txt lag.txt lb.txt lg.txt lkt.txt\
+ ln.txt lo.txt lrc.txt lt.txt lu.txt\
+ luo.txt luy.txt lv.txt mas.txt mer.txt\
+ mfe.txt mg.txt mgh.txt mgo.txt mi.txt\
+ mk.txt ml.txt mn.txt mr.txt ms.txt\
+ mt.txt mua.txt my.txt mzn.txt naq.txt\
+ nb.txt nd.txt nds.txt ne.txt nl.txt\
+ nmg.txt nn.txt nnh.txt nus.txt nyn.txt\
+ om.txt or.txt os.txt pa.txt pa_Arab.txt\
+ pa_Guru.txt pl.txt ps.txt ps_PK.txt pt.txt\
+ pt_AO.txt pt_CH.txt pt_CV.txt pt_GQ.txt pt_GW.txt\
+ pt_LU.txt pt_MO.txt pt_MZ.txt pt_PT.txt pt_ST.txt\
+ pt_TL.txt qu.txt rm.txt rn.txt ro.txt\
+ ro_MD.txt rof.txt ru.txt ru_UA.txt rw.txt\
+ rwk.txt sah.txt saq.txt sbp.txt sd.txt\
+ se.txt se_FI.txt seh.txt ses.txt sg.txt\
+ shi.txt shi_Latn.txt shi_Tfng.txt si.txt sk.txt\
+ sl.txt smn.txt sn.txt so.txt sq.txt\
+ sr.txt sr_Cyrl.txt sr_Cyrl_BA.txt sr_Cyrl_ME.txt sr_Cyrl_XK.txt\
+ sr_Latn.txt sr_Latn_BA.txt sr_Latn_ME.txt sr_Latn_XK.txt sv.txt\
+ sw.txt sw_CD.txt sw_KE.txt ta.txt te.txt\
+ teo.txt tg.txt th.txt ti.txt tk.txt\
+ to.txt tr.txt tt.txt twq.txt tzm.txt\
+ ug.txt uk.txt ur.txt ur_IN.txt uz.txt\
+ uz_Arab.txt uz_Cyrl.txt uz_Latn.txt vai.txt vai_Latn.txt\
+ vai_Vaii.txt vi.txt vun.txt wae.txt wo.txt\
+ xh.txt xog.txt yav.txt yi.txt yo.txt\
+ yo_BJ.txt yue.txt yue_Hans.txt yue_Hant.txt zgh.txt\
+ zh.txt zh_Hans.txt zh_Hant.txt zh_Hant_HK.txt zh_Hant_MO.txt\
+ zu.txt
 

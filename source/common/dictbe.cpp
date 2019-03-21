@@ -7,6 +7,8 @@
  *******************************************************************************
  */
 
+#include <utility>
+
 #include "unicode/utypes.h"
 
 #if !UCONFIG_NO_BREAK_ITERATION
@@ -807,11 +809,11 @@ foundBest:
 static const int32_t KHMER_LOOKAHEAD = 3;
 
 // Will not combine a non-word with a preceding dictionary word longer than this
-static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 10;
+static const int32_t KHMER_ROOT_COMBINE_THRESHOLD = 3;
 
 // Will not combine a non-word that shares at least this much prefix with a
 // dictionary word, with a preceding word
-static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 5;
+static const int32_t KHMER_PREFIX_COMBINE_THRESHOLD = 3;
 
 // Minimum word size
 static const int32_t KHMER_MIN_WORD = 2;
@@ -1204,8 +1206,8 @@ CjkBreakEngine::divideUpDictionaryRange( UText *inText,
                 inputMap->elementAti(inString.length()) : inString.length()+rangeStart;
         normalizedMap->addElement(nativeEnd, status);
 
-        inputMap.moveFrom(normalizedMap);
-        inString.moveFrom(normalizedInput);
+        inputMap = std::move(normalizedMap);
+        inString = std::move(normalizedInput);
     }
 
     int32_t numCodePts = inString.countChar32();
