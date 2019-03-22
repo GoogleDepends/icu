@@ -8,6 +8,7 @@ ar_AE{
                 group{"٬"}
             }
         }
+        default{"arab"}
         latn{
             symbols{
                 decimal{"."}

@@ -8,6 +8,7 @@ ar_KW{
                 group{"٬"}
             }
         }
+        default{"arab"}
         latn{
             symbols{
                 decimal{"."}

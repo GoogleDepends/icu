@@ -36,8 +36,7 @@ ar{
                 timeSeparator{":"}
             }
         }
-        default{"arab"}
-        default_latn{"latn"}
+        default{"latn"}
         latn{
             miscPatterns{
                 approximately{"~{0}"}

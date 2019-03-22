@@ -115,6 +115,8 @@ int main(int argc, char** argv) {
 #else
 #undef DOUBLE_CONVERSION_CORRECT_DOUBLE_OPERATIONS
 #endif  // _WIN32
+#elif U_PLATFORM == U_PF_BROWSER_NATIVE_CLIENT
+#undef DOUBLE_CONVERSION_CORRECT_DOUBLE_OPERATIONS
 #else
 #error Target architecture was not detected as supported by Double-Conversion.
 #endif
