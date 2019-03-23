@@ -224,8 +224,6 @@ D. Local Modifications
   - patches/vscomp.patch for building with Visual Studio on Windows:
     do not use WINDOWS_LOCALE_API in locmap.c
 
-  - patches/data.build.win.patch :
-      Windows-only data build patch.
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
