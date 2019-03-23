@@ -214,19 +214,25 @@ D. Local Modifications
   - patches/configure.patch:
     * Remove a section of configure that will cause breakage while
       running runConfigureICU.
-  - patches/semicolon.patch:
-    * ICU extra semicolon caused build breakage.
-    patch: patches/semi.patch
+
+  - patches/semicolon.patch (fixed in ICU 64.1-to-be)
+    * Extra semicolon caused build breakage.
     upstream bug: https://unicode-org.atlassian.net/browse/ICU-20508
+
   - patches/wpo.patch (only needed when icudata dll is used).
     upstream bugs : https://unicode-org.atlassian.net/browse/ICU-8043
                     https://unicode-org.atlassian.net/browse/ICU-5701
+
   - patches/vscomp.patch for building with Visual Studio on Windows:
     do not use WINDOWS_LOCALE_API in locmap.c
 
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
+
+  - patches/msvc_4003.patch (fixed in ICU 64.1-to-be)
+    upstream bug : https://unicode-org.atlassian.net/browse/ICU-20516
+    Fix: https://github.com/unicode-org/icu/pull/560
 
 6. Double conversion library build failure
 
