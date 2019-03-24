@@ -32,11 +32,9 @@
 #include "cmemory.h"
 #include "unicode/uloc.h"
 
-#if 0
 #if U_PLATFORM_HAS_WIN32_API && UCONFIG_USE_WINDOWS_LCID_MAPPING_API
 #include <windows.h>
 #include <winnls.h> // LCIDToLocaleName and LocaleNameToLCID
-#endif
 #endif
 
 /*
