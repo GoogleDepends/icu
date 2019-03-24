@@ -223,9 +223,6 @@ D. Local Modifications
     upstream bugs : https://unicode-org.atlassian.net/browse/ICU-8043
                     https://unicode-org.atlassian.net/browse/ICU-5701
 
-  - patches/vscomp.patch for building with Visual Studio on Windows:
-    do not use WINDOWS_LOCALE_API in locmap.c
-
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
