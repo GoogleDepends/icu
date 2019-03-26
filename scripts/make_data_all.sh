@@ -4,22 +4,22 @@ set -x
 
 ICUROOT="$(dirname "$0")/.."
 
-$ICUROOT/scripts/trim_data.sh
-$ICUROOT/scripts/make_data.sh
-$ICUROOT/scripts/copy_data.sh chromeos
-# TODO(ftang) trim data only needed for chromeos
-$ICUROOT/scripts/make_data.sh
+"${ICUROOT}/source/runConfigureICU" --enable-debug --disable-release Linux/gcc --disable-tests
+(cd data && make clean)
+$ICUROOT/scripts/config_data.sh common
+make -j 120
 $ICUROOT/scripts/copy_data.sh common
-$ICUROOT/cast/patch_locale.sh
-$ICUROOT/scripts/make_data.sh
+
+#$ICUROOT/cast/patch_locale.sh
+#$ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh cast
-$ICUROOT/android/patch_locale.sh
-$ICUROOT/scripts/make_data.sh
+#$ICUROOT/android/patch_locale.sh
+#$ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh android
-$ICUROOT/ios/patch_locale.sh
-$ICUROOT/scripts/make_data.sh
+#$ICUROOT/ios/patch_locale.sh
+#$ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh ios
-$ICUROOT/flutter/patch_brkitr.sh
-$ICUROOT/scripts/make_data.sh
+#$ICUROOT/flutter/patch_brkitr.sh
+#$ICUROOT/scripts/make_data.sh
 $ICUROOT/scripts/copy_data.sh flutter
 $ICUROOT/scripts/clean_up_data_source.sh
