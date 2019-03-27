@@ -78,6 +78,14 @@ function copy_flutter {
   echo "Done with copying pre-built ICU data file for Flutter."
 }
 
+BACKUP_DIR="dataout/$1"
+function backup_outdir {
+  rm -rf "${BACKUP_DIR}"
+  mkdir "${BACKUP_DIR}"
+  find "data/out" | cpio -pdmv "${BACKUP_DIR}"
+}
+
+backup_outdir $1
 case "$1" in
   "chromeos")
     copy_chromeos

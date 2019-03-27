@@ -206,8 +206,6 @@
         "sent_el",
         "title",
         "word",
-// ICU64 add "line_cj"
-        "line_cj",
 // Added by android/brkitr.patch
         "word_ja"
       ]
@@ -643,8 +641,8 @@
 // UNIT_ALIAS_SOURCE = $(UNIT_SYNTHETIC_ALIAS)\
 //  zh_CN.txt zh_TW.txt zh_HK.txt zh_SG.txt\
 //  no.txt in.txt iw.txt tl.txt sh.txt
-//        "zh_CN", "zh_TW", "zh_HK", "zh_SG",
-//        "no", "in", "iw", "tl", "sh",
+        "zh_CN", "zh_TW", "zh_HK", "zh_SG",
+        "no", "in", "iw", "tl", "sh",
 // # Ordinary resources
 // UNIT_SOURCE =\
         "am",
@@ -1436,6 +1434,7 @@
         "coll_tree"
       ],
       "rules": [
+        "-/UCARules",
 	"-/collations/*/Sequence"
       ]
     },

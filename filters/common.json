@@ -1512,6 +1512,7 @@
         "coll_tree"
       ],
       "rules": [
+        "-/UCARules",
 	"-/collations/*/Sequence"
       ]
     },
