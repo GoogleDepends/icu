@@ -1,11 +1,11 @@
 Name: icu
 URL: https://github.com/unicode-org/icu
-Version: 64.rc2
+Version: 64.1
 License: MIT
 Security Critical: yes
 
 Description:
-This directory contains the source code of ICU 64.rc2 for C/C++.
+This directory contains the source code of ICU 64.1 for C/C++.
 
 A. How to update ICU
 
@@ -215,10 +215,6 @@ D. Local Modifications
     * Remove a section of configure that will cause breakage while
       running runConfigureICU.
 
-  - patches/semicolon.patch (fixed in ICU 64.1-to-be)
-    * Extra semicolon caused build breakage.
-    upstream bug: https://unicode-org.atlassian.net/browse/ICU-20508
-
   - patches/wpo.patch (only needed when icudata dll is used).
     upstream bugs : https://unicode-org.atlassian.net/browse/ICU-8043
                     https://unicode-org.atlassian.net/browse/ICU-5701
@@ -226,10 +222,8 @@ D. Local Modifications
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
-
-  - patches/msvc_4003.patch (fixed in ICU 64.1-to-be)
-    upstream bug : https://unicode-org.atlassian.net/browse/ICU-20516
-    Fix: https://github.com/unicode-org/icu/pull/560
+  - patches/staticmutex.patch :
+      Change the static UMutex code to avoid static_initializers error.
 
 6. Double conversion library build failure
 

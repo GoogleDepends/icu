@@ -54,150 +54,6 @@ index e741197e..671933ee 100644
          latn{
              miscPatterns{
                  approximately{"~{0}"}
-diff --git a/source/data/locales/ar_AE.txt b/source/data/locales/ar_AE.txt
-index e2a24199..cc0f7184 100644
---- a/source/data/locales/ar_AE.txt
-+++ b/source/data/locales/ar_AE.txt
-@@ -8,6 +8,7 @@ ar_AE{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_BH.txt b/source/data/locales/ar_BH.txt
-index 5f2df59b..9d5f36f9 100644
---- a/source/data/locales/ar_BH.txt
-+++ b/source/data/locales/ar_BH.txt
-@@ -8,6 +8,7 @@ ar_BH{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_EG.txt b/source/data/locales/ar_EG.txt
-index 2c78ec2b..2a4e5a09 100644
---- a/source/data/locales/ar_EG.txt
-+++ b/source/data/locales/ar_EG.txt
-@@ -8,6 +8,7 @@ ar_EG{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_IQ.txt b/source/data/locales/ar_IQ.txt
-index 20c06c49..b35d3bba 100644
---- a/source/data/locales/ar_IQ.txt
-+++ b/source/data/locales/ar_IQ.txt
-@@ -8,6 +8,7 @@ ar_IQ{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_JO.txt b/source/data/locales/ar_JO.txt
-index 26a567f1..8fcff5c4 100644
---- a/source/data/locales/ar_JO.txt
-+++ b/source/data/locales/ar_JO.txt
-@@ -8,6 +8,7 @@ ar_JO{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_KW.txt b/source/data/locales/ar_KW.txt
-index 64fe9154..a7592074 100644
---- a/source/data/locales/ar_KW.txt
-+++ b/source/data/locales/ar_KW.txt
-@@ -8,6 +8,7 @@ ar_KW{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_OM.txt b/source/data/locales/ar_OM.txt
-index d796b4b5..ee086793 100644
---- a/source/data/locales/ar_OM.txt
-+++ b/source/data/locales/ar_OM.txt
-@@ -8,6 +8,7 @@ ar_OM{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_QA.txt b/source/data/locales/ar_QA.txt
-index b56404ed..4fa9b6ca 100644
---- a/source/data/locales/ar_QA.txt
-+++ b/source/data/locales/ar_QA.txt
-@@ -8,6 +8,7 @@ ar_QA{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_SA.txt b/source/data/locales/ar_SA.txt
-index 7b23c8fb..7aeb30d1 100644
---- a/source/data/locales/ar_SA.txt
-+++ b/source/data/locales/ar_SA.txt
-@@ -3,6 +3,7 @@
- ar_SA{
-     ExemplarCharactersNumbers{"[\u200E \\- , . ٪ ‰ + 0 1 2 3 4 5 6 7 8 9]"}
-     NumberElements{
-+        default{"arab"}
-         latn{
-             symbols{
-                 percentSign{"٪"}
-diff --git a/source/data/locales/ar_SD.txt b/source/data/locales/ar_SD.txt
-index a6507b55..c24e642a 100644
---- a/source/data/locales/ar_SD.txt
-+++ b/source/data/locales/ar_SD.txt
-@@ -8,6 +8,7 @@ ar_SD{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_SY.txt b/source/data/locales/ar_SY.txt
-index e834fc9d..c31406f7 100644
---- a/source/data/locales/ar_SY.txt
-+++ b/source/data/locales/ar_SY.txt
-@@ -8,6 +8,7 @@ ar_SY{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
-diff --git a/source/data/locales/ar_YE.txt b/source/data/locales/ar_YE.txt
-index fab8c2f6..50375bdc 100644
---- a/source/data/locales/ar_YE.txt
-+++ b/source/data/locales/ar_YE.txt
-@@ -8,6 +8,7 @@ ar_YE{
-                 group{"٬"}
-             }
-         }
-+        default{"arab"}
-         latn{
-             symbols{
-                 decimal{"."}
 diff --git a/source/data/locales/hi.txt b/source/data/locales/hi.txt
 index cd8268f0..60a5dd7b 100644
 --- a/source/data/locales/hi.txt
@@ -263,10 +119,10 @@ index f9d35818..5a8e98eb 100644
      shk{"shk_Latn_ZZ"}
      shn{"shn_Mymr_MM"}
 diff --git a/source/data/misc/metadata.txt b/source/data/misc/metadata.txt
-index bd584abf..151d00ec 100644
+index 239591cd..d40f1e38 100644
 --- a/source/data/misc/metadata.txt
 +++ b/source/data/misc/metadata.txt
-@@ -4882,6 +4882,8 @@ metadata:table(nofallback){
+@@ -4970,6 +4970,8 @@ metadata:table(nofallback){
          "ksb_TZ",
          "ksf_CM",
          "ksh_DE",
@@ -450,7 +306,7 @@ index fd6ff31e..f6122dd7 100644
          TL{"تيمور الشرقية"}
      }
 diff --git a/source/data/region/ar_SA.txt b/source/data/region/ar_SA.txt
-index badd2b05..e25b5606 100644
+index 8b0b0535..ac60fb57 100644
 --- a/source/data/region/ar_SA.txt
 +++ b/source/data/region/ar_SA.txt
 @@ -5,13 +5,10 @@ ar_SA{
@@ -1670,7 +1526,7 @@ index 988610d5..15a4b85e 100644
          TL{"Ɣedzeƒe Timɔ nutome"}
      }
 diff --git a/source/data/region/el.txt b/source/data/region/el.txt
-index f814b973..a4bbbac7 100644
+index 21772b96..05bd4f7f 100644
 --- a/source/data/region/el.txt
 +++ b/source/data/region/el.txt
 @@ -110,7 +110,7 @@ el{
@@ -1726,7 +1582,7 @@ index f814b973..a4bbbac7 100644
 -        FK{"Νήσοι Φόκλαντ (Νήσοι Μαλβίνας)"}
          TL{"Ανατολικό Τιμόρ"}
      }
-     Version{"2.1.48.27"}
+     Version{"2.1.49.26"}
 diff --git a/source/data/region/en.txt b/source/data/region/en.txt
 index 307abf18..0c1347ee 100644
 --- a/source/data/region/en.txt
@@ -4259,7 +4115,7 @@ index 7c52da97..22e508ce 100644
      }
      Version{"2.1.48.42"}
 diff --git a/source/data/region/ms.txt b/source/data/region/ms.txt
-index b835f97b..b78d3634 100644
+index d7995916..6d13e5f4 100644
 --- a/source/data/region/ms.txt
 +++ b/source/data/region/ms.txt
 @@ -110,7 +110,7 @@ ms{
@@ -4315,7 +4171,7 @@ index b835f97b..b78d3634 100644
 -        FK{"Kepulauan Falkland (Islas Malvinas)"}
          TL{"Timor Timur"}
      }
-     Version{"2.1.48.42"}
+     Version{"2.1.49.2"}
 diff --git a/source/data/region/mt.txt b/source/data/region/mt.txt
 index 9e1e0a19..5f1cc7bf 100644
 --- a/source/data/region/mt.txt
@@ -6925,7 +6781,7 @@ index bb8d090e..b405d301 100644
          SZ{"SZ"}
          TL{"i-East Timor"}
 diff --git a/source/data/zone/ko.txt b/source/data/zone/ko.txt
-index f749712d..d03bc3e6 100644
+index f2a7cd65..721803b7 100644
 --- a/source/data/zone/ko.txt
 +++ b/source/data/zone/ko.txt
 @@ -1644,9 +1644,9 @@ ko{

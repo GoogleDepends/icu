@@ -10,7 +10,7 @@ ar_SA{
             }
         }
     }
-    Version{"2.1.47.86"}
+    Version{"2.1.49.36"}
     calendar{
         default{"islamic-umalqura"}
         gregorian{

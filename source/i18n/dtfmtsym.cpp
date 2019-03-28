@@ -235,8 +235,6 @@ static const char gDayPeriodTag[]="dayPeriod";
 
 static const char gContextTransformsTag[]="contextTransforms";
 
-static UMutex LOCK = U_MUTEX_INITIALIZER;
-
 /**
  * Jitterbug 2974: MSVC has a bug whereby new X[0] behaves badly.
  * Work around this.
@@ -1248,8 +1246,9 @@ const UnicodeString**
 DateFormatSymbols::getZoneStrings(int32_t& rowCount, int32_t& columnCount) const
 {
     const UnicodeString **result = NULL;
+    static UMutex *LOCK = new UMutex();
 
-    umtx_lock(&LOCK);
+    umtx_lock(LOCK);
     if (fZoneStrings == NULL) {
         if (fLocaleZoneStrings == NULL) {
             ((DateFormatSymbols*)this)->initZoneStringsArray();
@@ -1260,7 +1259,7 @@ DateFormatSymbols::getZoneStrings(int32_t& rowCount, int32_t& columnCount) const
     }
     rowCount = fZoneStringsRowCount;
     columnCount = fZoneStringsColCount;
-    umtx_unlock(&LOCK);
+    umtx_unlock(LOCK);
 
     return result;
 }

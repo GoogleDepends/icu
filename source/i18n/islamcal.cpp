@@ -54,7 +54,6 @@ static void debug_islamcal_msg(const char *pat, ...)
 
 // --- The cache --
 // cache of months
-static icu::UMutex astroLock = U_MUTEX_INITIALIZER;  // pod bay door lock
 static icu::CalendarCache *gMonthCache = NULL;
 static icu::CalendarAstronomer *gIslamicCalendarAstro = NULL;
 
@@ -471,7 +470,8 @@ double IslamicCalendar::moonAge(UDate time, UErrorCode &status)
 {
     double age = 0;
 
-    umtx_lock(&astroLock);
+    static UMutex *astroLock = new UMutex();      // pod bay door lock
+    umtx_lock(astroLock);
     if(gIslamicCalendarAstro == NULL) {
         gIslamicCalendarAstro = new CalendarAstronomer();
         if (gIslamicCalendarAstro == NULL) {
@@ -482,7 +482,7 @@ double IslamicCalendar::moonAge(UDate time, UErrorCode &status)
     }
     gIslamicCalendarAstro->setTime(time);
     age = gIslamicCalendarAstro->getMoonAge();
-    umtx_unlock(&astroLock);
+    umtx_unlock(astroLock);
 
     // Convert to degrees and normalize...
     age = age * 180 / CalendarAstronomer::PI;
