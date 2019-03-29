@@ -1131,7 +1131,6 @@
     {"categories":["lang_tree"],"files":{"whitelist":["sn"]},"rules":["-/*","+/%%ALIAS","+/Languages/sn"] },
     {"categories":["lang_tree"],"files":{"whitelist":["so"]},"rules":["-/*","+/%%ALIAS","+/Languages/so"] },
     {"categories":["lang_tree"],"files":{"whitelist":["sq"]},"rules":["-/*","+/%%ALIAS","+/Languages/sq"] },
-    {"categories":["lang_tree"],"files":{"whitelist":["sr_Latn"]},"rules":["-/*","+/%%ALIAS","+/Languages/sr_Latn"] },
     {"categories":["lang_tree"],"files":{"whitelist":["st"]},"rules":["-/*","+/%%ALIAS","+/Languages/st"] },
     {"categories":["lang_tree"],"files":{"whitelist":["su"]},"rules":["-/*","+/%%ALIAS","+/Languages/su"] },
     {"categories":["lang_tree"],"files":{"whitelist":["tg"]},"rules":["-/*","+/%%ALIAS","+/Languages/tg"] },
@@ -1153,6 +1152,20 @@
     {"categories":["lang_tree"],"files":{"whitelist":["yi"]},"rules":["-/*","+/%%ALIAS","+/Languages/yi"] },
     {"categories":["lang_tree"],"files":{"whitelist":["yo"]},"rules":["-/*","+/%%ALIAS","+/Languages/yo"] },
     {"categories":["lang_tree"],"files":{"whitelist":["zu"]},"rules":["-/*","+/%%ALIAS","+/Languages/zu"] },
+// The following is added based on
+// https://cs.chromium.org/chromium/src/third_party/icu/cast/patch_locale.sh?rcl=797b7c
+// # Chrome on Android is not localized to the following languages and we
+// # have to minimize the locale data for them.
+// EXTRA_LANGUAGES="bn et gu kn ml mr ms ta te"
+    {"categories":["lang_tree"],"files":{"whitelist":["bn"]},"rules":["-/*","+/%%ALIAS","+/Languages/bn"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["et"]},"rules":["-/*","+/%%ALIAS","+/Languages/et"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["gu"]},"rules":["-/*","+/%%ALIAS","+/Languages/gu"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["kn"]},"rules":["-/*","+/%%ALIAS","+/Languages/kn"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["ml"]},"rules":["-/*","+/%%ALIAS","+/Languages/ml"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["mr"]},"rules":["-/*","+/%%ALIAS","+/Languages/mr"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["ms"]},"rules":["-/*","+/%%ALIAS","+/Languages/ms"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["ta"]},"rules":["-/*","+/%%ALIAS","+/Languages/ta"] },
+    {"categories":["lang_tree"],"files":{"whitelist":["te"]},"rules":["-/*","+/%%ALIAS","+/Languages/te"] },
 // Based on filter_currency_data
 // # Keep only the currencies used by the larget 150 economies in terms of GDP.
 // # TODO(jshin): Use ucurr_isAvailable in ICU to drop more currencies.
@@ -1887,7 +1900,6 @@
           "sn",
           "so",
           "sq",
-          "sr_Latn",
           "st",
           "su",
           "tg",

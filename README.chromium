@@ -222,8 +222,15 @@ D. Local Modifications
   - patches/data_symb.patch :
       Put ICU_DATA_ENTRY_POINT(icudtXX_dat) in common when we use
       the icu data file or icudt.dll
+
   - patches/staticmutex.patch :
       Change the static UMutex code to avoid static_initializers error.
+      upstream bug: https://unicode-org.atlassian.net/browse/ICU-20520
+
+  - patches/buildtool.patch :
+      Fix the build tool which ommited res_index.res */res_index.res files
+      upstream bug: https://unicode-org.atlassian.net/browse/ICU-20529
+      upstream PR: https://github.com/unicode-org/icu/pull/571/
 
 6. Double conversion library build failure
 
