@@ -15,6 +15,9 @@ make -j 120
 $ICUROOT/scripts/copy_data.sh common
 
 echo "Build the filtered data for chromeos"
+(cd data && make clean)
+$ICUROOT/scripts/config_data.sh chromeos
+make -j 120
 # For now just copy the build result from common
 $ICUROOT/scripts/copy_data.sh chromeos
 
