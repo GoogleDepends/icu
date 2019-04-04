@@ -851,7 +851,6 @@
         "-/ExemplarCharacters",
         "-/ExemplarCharactersNumbers",
         "-/ExemplarCharactersPunctuation",
-        "-/ExemplarCharactersIndex",
         "-/measurementSystemNames",
         "-/NumberElements/minimalPairs",
         "-/delimiters"
@@ -867,7 +866,6 @@
         "-/Languages%long",
         "-/Languages%short",
         "-/Languages%variant",
-        "-/Languages%stand-alone",
 // Based on https://cs.chromium.org/chromium/src/third_party/icu/scripts/accept_lang.list?rcl=797b7c
         "+/*/ach",
         "+/*/af",
@@ -1339,45 +1337,6 @@
 	"-/collations/*/Sequence"
       ]
     },
-// Based on filter_unit_data
-// # Keep only duration and compound in units* sections.
-    {
-      "categories": [
-        "unit_tree"
-      ],
-      "rules": [
-        "-/*",
-//      "-/*/acceleration",
-//      "-/*/angle",
-//      "-/*/area",
-        "+/*/compound",
-        "-/*/compound/*/dnam",
-//      "+/*/concentr",
-        "+/*/concentr/percent",
-        "-/*/concentr/percent/dnam",
-//      "+/*/consumption",
-//      "+/*/coordinate",
-        "+/*/digital",
-        "-/*/digital/*/dnam",
-        "+/*/duration",
-        "-/*/duration/*/dnam",
-//      "+/*/electric",
-//      "+/*/energy",
-//      "+/*/force",
-        "+/*/frequency",
-        "-/*/frequency/*/dnam",
-        "+/*/length",
-        "-/*/length/*/dnam",
-//      "+/*/mass",
-//      "+/*/power",
-//      "+/*/pressure",
-//      "+/*/speed",
-        "+/*/temperature",
-        "-/*/temperature/*/dnam"
-//      "+/*/torque",
-//      "+/*/volume",
-      ]
-    },
 // Based on
 // https://cs.chromium.org/chromium/src/third_party/icu/source/data/translit/root_subset.txt?rcl=797b7c
     {
@@ -1396,12 +1355,6 @@
       "categories": [
         "zone_tree"
       ],
-      "files": {
-        "blacklist": [
-	  "root",
-	  "tzdbNames"
-	]
-      },
       "rules": [
         "-/zoneStrings/Africa:Abidjan",
         "-/zoneStrings/Africa:Accra",
@@ -1721,7 +1674,7 @@
         "-/zoneStrings/Australia:Perth",
         "-/zoneStrings/Australia:Sydney",
         "-/zoneStrings/Etc:Unknown",
-        "-/zoneStrings/Etc:UTC",
+        "-/zoneStrings/Etc:UTC/ec",
         "-/zoneStrings/Europe:Amsterdam",
         "-/zoneStrings/Europe:Andorra",
         "-/zoneStrings/Europe:Astrakhan",
@@ -1735,7 +1688,7 @@
         "-/zoneStrings/Europe:Busingen",
         "-/zoneStrings/Europe:Chisinau",
         "-/zoneStrings/Europe:Copenhagen",
-        "-/zoneStrings/Europe:Dublin",
+        "-/zoneStrings/Europe:Dublin/ec",
         "-/zoneStrings/Europe:Gibraltar",
         "-/zoneStrings/Europe:Guernsey",
         "-/zoneStrings/Europe:Helsinki",
@@ -1747,7 +1700,7 @@
         "-/zoneStrings/Europe:Kirov",
         "-/zoneStrings/Europe:Lisbon",
         "-/zoneStrings/Europe:Ljubljana",
-        "-/zoneStrings/Europe:London",
+        "-/zoneStrings/Europe:London/ec",
         "-/zoneStrings/Europe:Luxembourg",
         "-/zoneStrings/Europe:Madrid",
         "-/zoneStrings/Europe:Malta",
@@ -1807,7 +1760,7 @@
         "-/zoneStrings/Pacific:Gambier",
         "-/zoneStrings/Pacific:Guadalcanal",
         "-/zoneStrings/Pacific:Guam",
-        "-/zoneStrings/Pacific:Honolulu",
+        "-/zoneStrings/Pacific:Honolulu/ec",
         "-/zoneStrings/Pacific:Johnston",
         "-/zoneStrings/Pacific:Kiritimati",
         "-/zoneStrings/Pacific:Kosrae",

@@ -839,7 +839,6 @@
         "-/ExemplarCharacters",
         "-/ExemplarCharactersNumbers",
         "-/ExemplarCharactersPunctuation",
-        "-/ExemplarCharactersIndex",
         "-/measurementSystemNames",
         "-/NumberElements/minimalPairs",
         "-/delimiters"
@@ -855,7 +854,6 @@
         "-/Languages%long",
         "-/Languages%short",
         "-/Languages%variant",
-        "-/Languages%stand-alone",
 // Based on https://cs.chromium.org/chromium/src/third_party/icu/scripts/accept_lang.list?rcl=797b7c
         "+/*/ach",
         "+/*/af",
@@ -1549,7 +1547,9 @@
         "unit_tree"
       ],
       "rules": [
-        "-/*",
+        "-/units",
+        "-/unitsNarrow",
+        "-/unitsShort",
         "+/*/acceleration",
         "-/*/acceleration/*/dnam",
         "+/*/angle",
@@ -1609,12 +1609,6 @@
       "categories": [
         "zone_tree"
       ],
-      "files": {
-        "blacklist": [
-	  "root",
-	  "tzdbNames"
-	]
-      },
       "rules": [
         "-/zoneStrings/Africa:Abidjan",
         "-/zoneStrings/Africa:Accra",
@@ -1934,7 +1928,7 @@
         "-/zoneStrings/Australia:Perth",
         "-/zoneStrings/Australia:Sydney",
         "-/zoneStrings/Etc:Unknown",
-        "-/zoneStrings/Etc:UTC",
+        "-/zoneStrings/Etc:UTC/ec",
         "-/zoneStrings/Europe:Amsterdam",
         "-/zoneStrings/Europe:Andorra",
         "-/zoneStrings/Europe:Astrakhan",
@@ -1948,7 +1942,7 @@
         "-/zoneStrings/Europe:Busingen",
         "-/zoneStrings/Europe:Chisinau",
         "-/zoneStrings/Europe:Copenhagen",
-        "-/zoneStrings/Europe:Dublin",
+        "-/zoneStrings/Europe:Dublin/ec",
         "-/zoneStrings/Europe:Gibraltar",
         "-/zoneStrings/Europe:Guernsey",
         "-/zoneStrings/Europe:Helsinki",
@@ -1960,7 +1954,7 @@
         "-/zoneStrings/Europe:Kirov",
         "-/zoneStrings/Europe:Lisbon",
         "-/zoneStrings/Europe:Ljubljana",
-        "-/zoneStrings/Europe:London",
+        "-/zoneStrings/Europe:London/ec",
         "-/zoneStrings/Europe:Luxembourg",
         "-/zoneStrings/Europe:Madrid",
         "-/zoneStrings/Europe:Malta",
@@ -2020,7 +2014,7 @@
         "-/zoneStrings/Pacific:Gambier",
         "-/zoneStrings/Pacific:Guadalcanal",
         "-/zoneStrings/Pacific:Guam",
-        "-/zoneStrings/Pacific:Honolulu",
+        "-/zoneStrings/Pacific:Honolulu/ec",
         "-/zoneStrings/Pacific:Johnston",
         "-/zoneStrings/Pacific:Kiritimati",
         "-/zoneStrings/Pacific:Kosrae",
