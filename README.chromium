@@ -136,16 +136,7 @@ them when updating ICU.
     from U+1E3F to \xA8\xBC (windows-936/GBK).
        See https://www.w3.org/Bugs/Public/show_bug.cgi?id=28740#c3
 
-2. source/data/*/*local.mk
-  - List locales of interest to Chromium
-   a. Chrome's UI languages
-   b. Variants of UI languages
-   c. Other locales in Accept-Language list : will only have bare minimum
-   locale data
-
-  - brklocal.mk drops some line*brk files to save space for now.
-
-3. source/data/brkitr
+2. source/data/brkitr
   - dictionaries/khmerdict.txt: Abridged Khmer dictionary. See
     https://unicode-org.atlassian.net/browse/ICU-9451
   - rules/word_ja.txt (used only on Android)
@@ -157,10 +148,7 @@ them when updating ICU.
        http://unicode.org/cldr/trac/ticket/6557
        http://unicode.org/cldr/trac/ticket/4200 (http://crbug.com/39779)
 
-4. source/data/trnslit/root_subset.txt
-   Subset of transliteration data to keep for:
-
-5. Add {an,ku,tg,wa}.txt to source/data/{locale,lang}
+3. Add {an,ku,tg,wa}.txt to source/data/{locale,lang}
    with the minimal locale data necessary for spellchecker and
    and language menus.
 
